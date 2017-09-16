@@ -209,6 +209,19 @@
     {.mobile {display: block;
               margin: auto}}
 
+    @media only screen and (max-width: 500px) and (min-width: )
+    {
+      .parallax
+      {
+        background-attachment: scroll;
+        background-position: -400px -50px;
+        background-size: 300%;
+      }
+
+
+
+    }
+
       .nav_link:hover{
         border-bottom: 2px solid black;
         padding-bottom: 4px;
