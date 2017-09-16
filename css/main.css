@@ -41,7 +41,7 @@
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
-    background-position: -450px 0px;
+    background-position: -600px 0px;
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 2.25rem;
@@ -111,6 +111,7 @@
   margin: auto;
   height: auto;
   width: 105%;
+  cursor: pointer;
 
 }
 
@@ -150,6 +151,7 @@
   color: black;
   display: block;
   margin: auto;
+  cursor: pointer;
 }
 
 
