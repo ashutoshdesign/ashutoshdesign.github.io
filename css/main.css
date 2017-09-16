@@ -1,0 +1,213 @@
+.navbar
+{
+  margin-bottom: 3.0%;
+}
+
+
+.logo
+{
+  width: 18%;
+  padding-top: 2.25rem;
+
+  display: block;
+  margin: auto;
+}
+
+.active
+{
+    border-bottom: 2px solid black;
+    padding-bottom: 4px;
+}
+
+
+/*.wrapper
+{
+  float: left;
+  position: relative;
+}
+
+
+.wrapper img{
+  width: 180%;
+
+}*/
+
+.parallax {
+    /* The image used */
+    background-image: url(../images/intro1.jpg);
+
+    /* Set a specific height */
+    height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: -450px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 2.25rem;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.description{
+	position: relative; /* relative position (so we can position it where we want)*/
+
+	width:100%;
+  height: 300px;
+	/* styling bellow */
+
+	color: white;
+  background-color: rgba(0,0,0,0.2);
+
+
+}
+
+.description_content{
+  padding-top: 12%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin: 0px;
+  text-align: center;
+  font: 300 1em/1.7em CallunaLghtRegular, serif;
+  letter-spacing: 0.06em;
+}
+
+.card{
+  background-color: #ffffff;
+  border: 1px solid #DBE0E6;
+  margin-bottom: 2.25rem;
+  margin-top: 0;
+  display: block;
+  margin: auto;
+  min-height: 300px;
+  height: auto;
+  padding: 0px 10px;
+  text-align: -webkit-center;
+  margin-bottom: 2.25rem;
+  padding-top: 8px;
+
+}
+
+.thumb
+{
+
+  border: 0px solid #000000;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  margin-bottom: 1.3em;
+  position: relative;
+
+
+}
+
+.project_image
+{
+  position: absolute;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
+  height: auto;
+  width: 105%;
+
+}
+
+.project_name
+{
+ font-family: 'Bebas Neue', "Helvetica Neue", arial, sans-serif;
+ text-transform: capitalize;
+ margin-bottom: 0.5em;
+
+
+}
+
+.project_name_child
+{
+  font-size: 2em;
+}
+
+.project_description
+{
+  font-family: CallunaLghtRegular, Georgia, serif;
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+}
+
+.readmore
+{
+  font-family: CallunaLghtRegular, Georgia, serif;
+  color: #EF5350;
+  font-size: 1.8rem;
+  margin-bottom: 2em;
+}
+
+.link
+{
+  font: normal 0.9em "Bebas Neue", sans-serif;
+
+  color: black;
+  display: block;
+  margin: auto;
+}
+
+
+
+.intro{
+  font-family: CallunaLghtRegular, Georgia, serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.contact_info
+{
+  margin-bottom: 2.8rem;
+  text-align: center;
+}
+
+
+.contact_info_ul
+{
+  font: 1.6rem CallunaLghtRegular, Georgia, serif;
+  padding-left: 0px;
+  list-style-type: none;
+
+
+}
+
+.contact_info_li
+{
+    display: inline;
+
+}
+
+.contact_info_li a
+{
+
+  padding: 0px 4px;
+  /*border-right: 1px solid black;*/
+  line-height: 32px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.copyright
+{
+  margin-bottom: 2.8rem;
+}
+
+.copyright_info
+{
+  font: 1.2rem CallunaLghtRegular, Georgia, serif;
+
+}
+
+.footer
+{
+  margin-top: 3rem;
+  text-align: center;
+}

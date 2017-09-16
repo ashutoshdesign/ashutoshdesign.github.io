@@ -1,0 +1,82 @@
+.level-one
+{
+  width: 100%;
+  
+  text-align: center;
+}
+
+.profile-pic
+{
+    width: 100%;
+    }
+
+.profile-pic-sub
+{
+
+   width: 100%;
+}
+
+
+
+.one-liner-text
+{
+    padding: 6% 6%;
+    background-color: rgb(26,30,35);
+    text-align: left;
+    width: 100%;
+    display: block;
+    font-style: italic;
+    z-index: 100;
+    top: 480px;
+    height: initial;
+}
+
+.one-liner-sub
+{
+    font: 200 2.8rem/3.8rem "Bebas Neue", sans-serif;
+    margin-bottom: 0px;
+    color: white;
+    
+    
+}
+
+.highlight
+{
+  background-color: rgba(239,83,80, 0.75);
+}
+
+.level-two
+{
+  margin-top: 6%;
+  font-family: CallunaLghtRegular, Georgia, serif;
+  font-size: 1.8rem;
+  margin-bottom: 1em;
+}
+
+.level-three
+{
+  width: 100%;
+}
+
+.recom
+{
+  width: 100%;
+  background-color: rgb(26,30,35);
+  padding: 10% 5%;
+}
+
+.text-container
+{
+  font-family: CallunaLghtRegular, Georgia, serif;
+  font-size: 1.8rem;
+  color: white;
+  padding: 6%;
+  border-left: 4px solid rgba(239,83,80, 0.75);
+  font-style: italic;
+}
+
+.recom-name
+{
+  text-transform: uppercase; 
+  margin-top: 8%;
+}
