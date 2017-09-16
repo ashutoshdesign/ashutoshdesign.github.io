@@ -62,7 +62,7 @@ body {
   height: 40px;
   position: absolute;
   top: 44%;
-  /*border-bottom: 3px solid #333;*/
+  border-bottom: 3px solid #333;
   border-left: 3px solid #333;
   opacity: 0.35;
   cursor: pointer;
