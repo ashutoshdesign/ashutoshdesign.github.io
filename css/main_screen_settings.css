@@ -42,6 +42,7 @@
         margin-top: 1.3em;
         width: 350px;
         height: 350px;
+        margin-left: 8%
       }
 
       .project_details
@@ -86,8 +87,8 @@
       .description_content{
          font-size: 3.6rem;
          padding-top: 18%;
-         padding-left: 36px;
-         padding-right: 36px;
+         padding-left: 48px;
+         padding-right: 48px;
       }
 
       .description{
@@ -207,9 +208,13 @@
 
     @media only screen and (max-width: 767px) and (min-width: )
     {.mobile {display: block;
-              margin: auto}}
+              margin: auto}
 
-    @media only screen and (max-width: 500px)
+
+
+    }
+
+    @media only screen and (max-width: 500px) 
     {
       .parallax
       {
@@ -221,6 +226,9 @@
 
 
     }
+
+
+
 
       .nav_link:hover{
         border-bottom: 2px solid black;
