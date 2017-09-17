@@ -285,6 +285,21 @@
 
     }
 
+    .project-link-1
+    {
+      font-family: CallunaLghtRegular, Georgia, serif;
+      color: #EF5350;
+
+    }
+
+    .project-link-1:hover
+    {
+      font-family: CallunaLghtRegular, Georgia, serif;
+      color: #EF5350;
+      text-decoration: none;
+
+    }
+
     .arrow-right
     {
       margin-right: 0.8rem;
@@ -461,8 +476,8 @@
 
       .presentation-images
       {
-        width: 88%;
-        height: 450px;
+        width: 100%;
+        height: 600px;
       }
 
       .project-1-empathy-images
@@ -474,7 +489,34 @@
       .project-1-jm-images
       {
         width: 100%;
-        height: 495px;
+        height: 400px;
+      }
+
+      .project-1-persona-images
+      {
+        width: 100%;
+        height: 430px;
+      }
+
+      .em-images {
+          height: 400px;
+          width: 100%;
+      }
+
+      .persona-images {
+          width: 100%;
+          height: 700px;
+      }
+
+      .scenario-images
+      {
+        width: 100%;
+        height: 600px;
+      }
+
+      .wireflow-images {
+          height: 450px;
+          width: 100%;
       }
       
 
@@ -535,15 +577,7 @@
         font: 200 2.0rem/2.8rem "CallunaLghtRegular", serif;
         
       }
-      .persona-images
-       {
-        width: 40%;
-       }
-
-       .scenario-images
-       {
-        width: 90%;
-       }
+      
     
     }
 
@@ -600,80 +634,298 @@
       {
         height: 400px;
       }
+
+      .presentation-images {
+        width: 100%;
+        height: 500px;
+      }
+
+      .project-1-empathy-images {
+        width: 100%;
+        height: 350px;
+      }
+
       .project-1-jm-images
       {
         width: 100%;
         height: 395px;
       }
+
+      .project-1-persona-images {
+        width: 100%;
+        height: 320px;
+      }
+
+      .scenario-images {
+          width: 100%;
+          height: 470px;
+      }
+
+      .persona-images {
+          width: 100%;
+          height: 600px;
+      }
+
+      .em-images {
+          height: 300px;
+          width: 100%;
+      }
+
+
+
     }
 
     @media only screen and (min-width: 1100px)
     {
-      .persona-images
-       {
-        width: 48%;
-       }
+      
 
-      .scenario-images
-      {
-        width: 60%;
-      }
+      
       .presentation-images
       {
-        width: 90%;
+        width: 100%;
         height: 550px;
       }
 
       .project-1-empathy-images
       {
         width: 100%;
-        height: 500px;
+        height: 390px;
       }
 
       .project-1-jm-images
       {
         width: 100%;
-        height: 495px;
+        height: 450px;
+      }
+
+      .project-1-persona-images
+      {
+        width: 100%;
+        height: 360px;
+      }
+
+      .em-images {
+          height: 340px;
+          width: 100%;
+      }
+
+      .persona-images {
+          width: 100%;
+          height: 650px;
+      }
+
+      .scenario-images {
+          width: 100%;
+          height: 490px;
+      }
+
+      .wireflow-images {
+          height: 400px;
+          width: 100%;
       }
       
     }
 
     @media only screen and (min-width: 1200px)
     {
-      .wireflow-images
-      {
-        height: 680px;
-      }
+      
 
-      .em-images
-      {
-        height: 560px;
-      }
+      
       .presentation-images
       {
-        width: 75%;
+        width: 100%;
         height: 550px;
       }
 
-      .project-1-empathy-images
-      {
-        width: 85%;
-        height: 550px;
-
-      }
+      
 
       .project-1-empathy-images
       {
-        width: 90%;
+        width: 100%;
+        height: 530px;
       }
 
       .project-1-jm-images
       {
-        width: 86%;
-        height: 560px;
+        width: 100%;
+        height: 580px;
       }
+
+      .project-1-persona-images
+      {
+        width: 100%;
+        height: 490px;
+      }
+
+      .wireflow-images {
+          height: 540px;
+          width: 100%;
+      }
+
+      .scenario-images {
+          width: 100%;
+          height: 650px;
+      }
+
+      .persona-images {
+          width: 100%;
+          height: 750px;
+      }
+
+      .em-images {
+          height: 460px;
+          width: 100%;
+      }
+
 }
     
+    @media only screen and (min-width: 1450px)
+    {
+      .project-margin-adjust
+      {
+        padding: 0% 10%;
+      }
+
+      .project-heading-type-3 
+      {
+        font: 200 3.2rem/5.2rem "Bebas Neue", sans-serif;
+      }
+
+      .project-heading-type-1 {
+        
+        font: 200 6.8rem/8.4rem "Bebas Neue", sans-serif;
+      }
+
+      .project-content {
+          font: 200 3.4rem/4.8rem "CallunaLghtRegular", sans-serif;
+      }
+
+      .project-heading-type-2 {
+          font: 200 4.6rem/5.2rem "Bebas Neue", sans-serif;
+      }
+
+      .project-1-photo-description {
+          font: 200 3.0rem/4.0rem "Calluna Italic", serif;
+      }
+
+      .project-1-photo-description-1 {
+          font: 200 3.0rem/4.0rem "Calluna Italic", serif;
+      }
+
+      .project-intro-text {
+          font: 200 3.8rem/6.0rem "CallunaLghtRegular", serif;
+      }
+
+      .project-title {
+          font: 200 10rem/9.0rem "Bebas Neue", sans-serif;
+      }
+
+      .project-highlights {
+          font: 200 4.4rem/6.4rem"CallunaLghtRegular", serif;
+      }
+
+      .presentation-images {
+          width: 100%;
+          height: 850px;
+      }
+
+      .project-1-empathy-images
+      {
+        width: 100%;
+        height: 700px;
+      }
+
+      .project-1-jm-images
+      {
+        width: 100%;
+        height: 800px;
+      }
+
+      .project-1-persona-images
+      {
+        width: 100%;
+        height: 680px;
+      }
+
+      .project-1-text-container
+      {
+        font-size: 3.4rem;
+
+      }
+
+      .project-link
+      {
+        font-size: 3.8rem;
+      }
+
+      .project-link-1
+      {
+        font-size: 3.4rem;
+      }
+
+      .em-images {
+          width: 100%;
+          height: 620px;
+      }
+
+      .persona-images {
+          width: 100%;
+          height: 800px;
+      }
+
+      .scenario-images {
+          width: 100%;
+          height: 650px;
+      }
+
+      .wireflow-images {
+          height: 740px;
+          width: 100%;
+      }
+
+      .project-highlights-stats-number {
+          font: 200 4.8rem/6.0rem "Calluna Italic", serif;
+
+
+      }
+
+      .project-highlights-stats {
+          font: 200 2.4rem/3.6rem "Calluna Italic", serif;
+
+      }
+
+      .one-below-another {
+          margin-top: 8%;
+      }
+
+      
+
+
+
+    }
+
+    @media only screen and (max-width: 1449px)
+    {
+      .project_image_1mg
+      {
+        width: 80%;
+      }
+
+      .project_image_rt
+      {
+        width: 90%
+      }
+
+      .project_image_techno
+      {
+        width: 90%
+      }
+
+      .project_image_resonance
+      {
+        width: 80%
+      }
+    }
 
 
     .project-highlight-1

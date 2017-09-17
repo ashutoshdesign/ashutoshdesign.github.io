@@ -40,10 +40,12 @@ body {
   font-family: serif;
 }
 .slider6 ul li:first-of-type {
-  background-image: url("../images/project-1-jm1.jpg")
+  background-image: url("../images/project-1-jm1.jpg");
+  background-position: left;
 }
 .slider6 ul li:nth-of-type(2) {
-  background-image: url("../images/project-1-jm2.jpg")
+  background-image: url("../images/project-1-jm2.jpg");
+  background-position: left;
 }
 /*.slider6 ul li:nth-of-type(3) {
   background-image: url("../images/project-1-jm3.jpg")

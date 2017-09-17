@@ -350,28 +350,29 @@
         font-size: 2.0rem;
       }
 
+      .project-1-text-container
+      {
+        font-size: 3.4rem;
+      }
+
+      .project-link
+      {
+        font-size: 2.8rem;
+      }
+
+      .project-link-1
+      {
+        font-size: 2.8rem;
+      }
+
+      .level-two
+      {
+        font-size: 3.8rem;
+        line-height: 6.0rem;
+      }
+
+
 
     }
 
-    @media only screen and (max-width: 1449px)
-    {
-      .project_image_1mg
-      {
-        width: 80%;
-      }
-
-      .project_image_rt
-      {
-        width: 90%
-      }
-
-      .project_image_techno
-      {
-        width: 90%
-      }
-
-      .project_image_resonance
-      {
-        width: 80%
-      }
-    }
+    
