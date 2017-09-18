@@ -214,7 +214,20 @@
 
     }
 
-    @media only screen and (max-width: 992px) 
+    @media only screen and (max-width: 800px) 
+    {
+      .parallax
+      {
+        background-attachment: scroll;
+        background-position: -400px -50px;
+        background-size: 200%;
+      }
+
+
+
+    }
+
+    @media only screen and (max-width: 500px) 
     {
       .parallax
       {
