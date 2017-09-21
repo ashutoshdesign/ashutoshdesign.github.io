@@ -38,6 +38,8 @@ body {
   background-position: center;
   color: #fff;
   font-family: serif;
+  background-size: 98%;
+  background-repeat: no-repeat;
 }
 .slider7 ul li:first-of-type {
   background-image: url("../images/Persona-1.jpg")
