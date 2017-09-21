@@ -39,6 +39,8 @@ body {
   background-position: center;
   color: #fff;
   font-family: serif;
+  background-size: 98%;
+  background-repeat: no-repeat;
 }
 .slider ul li:first-of-type {
   background-image: url("../images/project-2-em1.jpg")
