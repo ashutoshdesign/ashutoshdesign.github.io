@@ -38,6 +38,8 @@ body {
   background-position: center;
   color: #fff;
   font-family: serif;
+  background-size: 98%;
+  background-repeat: no-repeat;
 }
 .slider5 ul li:first-of-type {
   background-image: url("../images/project-1-em1.jpg")
