@@ -825,7 +825,7 @@
       }
 
       .project-title {
-          font: 200 10rem/9.0rem "Bebas Neue", sans-serif;
+          font: 200 9.4rem/9.0rem "Bebas Neue", sans-serif;
       }
 
       .project-highlights {
@@ -935,6 +935,12 @@
       }
     }
 
+@media only screen and (min-width: 1700px)
+{
+    .project-title {
+          font: 200 10rem/9.0rem "Bebas Neue", sans-serif;
+      }
+}
 
     .project-highlight-1
     {
