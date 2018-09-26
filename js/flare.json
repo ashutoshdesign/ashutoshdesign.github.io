@@ -1,0 +1,179 @@
+{"name": "SexEd",
+    "children": [
+      {
+
+        "name": "People",
+        "children": [
+
+          {"name": "Boy",
+          "size": 10000},
+          {"name": "Girl",
+          "size": 10000},
+          {"name": "Parents",
+          "size": 9000},
+          {"name": "Peers",
+          "size": 8500},
+          {"name": "Siblings",
+          "size": 5000}
+
+        ]
+
+      }, 
+
+      {
+
+        "name": "Stakeholders",
+        "children": [
+
+          {"name": "Teachers",
+          "size": 6000},
+          {"name": "Doctors",
+          "size": 6200},
+          {"name": "Nurses",
+          "size": 3450},
+          {"name": "Health Workers",
+          "size": 3120},
+          {"name": "Authors",
+          "size": 4450}
+
+        ]
+
+      }, 
+
+      
+
+      {
+
+        "name": "Content",
+        "children": [
+
+          {"name": "Human Reproduction",
+          "size": 2405},
+          {"name": "Diseases",
+          "size": 2301},
+          {"name": "Relationships",
+          "size": 3090},
+          {"name": "Preventive Measures",
+          "size": 3022},
+          {"name": "Puberty",
+          "size": 3102},
+          {"name": "Human Anatomy",
+          "size": 3102}
+
+        ]
+
+      }, 
+
+      {
+
+        "name": "Administration",
+        "children": [
+
+          {"name": "Local Govt.",
+          "size": 7540},
+          {"name": "NGOs",
+          "size": 6730},
+          {"name": "Politicians",
+          "size": 9420},
+          {"name": "PTA",
+          "size": 2360},
+          {"name": "Political Organizations",
+          "size": 8610},
+          {"name": "School Principal",
+          "size": 2310}
+
+        ]
+
+      }, 
+
+      {
+
+        "name": "Sexual Health",
+        "children": [
+
+          {"name": "Pregnancy",
+          "size": 2540},
+          {"name": "STDs",
+          "size": 2350},
+          {"name": "Contraceptives",
+          "size": 2720},
+          {"name": "Drugs",
+          "size": 2660},
+          {"name": "Pharmacies",
+          "size": 2410},
+          {"name": "Hospitals",
+          "size": 2710},
+          {"name": "Abortion",
+          "size": 2510},
+          {"name": "Nutrition",
+          "size": 2650}
+
+        ]
+
+      }, 
+
+      {
+
+        "name": "Society",
+        "children": [
+
+          {"name": "Cultural Practices",
+          "size": 7407},
+          {"name": "Crime",
+          "size": 8304},
+          {"name": "Tradition/Religion",
+          "size": 8006},
+          {"name": "Sex-oriented Abuses",
+          "size": 6605},
+          {"name": "Superstitions",
+          "size": 8103},
+          {"name": "Myths",
+          "size": 8104}
+
+        ]
+
+      }, 
+
+      {
+
+        "name": "Digital Media",
+        "children": [
+
+          {"name": "Social Media",
+          "size": 8403},
+          {"name": "Movies",
+          "size": 8304},
+          {"name": "Internet",
+          "size": 5208},
+          {"name": "Television",
+          "size": 4604},
+          {"name": "Video Games",
+          "size": 4105},
+          {"name": "Smart Class",
+          "size": 1643}
+
+        ]
+
+      }, 
+
+      {
+
+        "name": "Print Media",
+        "children": [
+
+          {"name": "Textbooks",
+          "size": 4450},
+          {"name": "Magazines",
+          "size": 3320},
+          {"name": "Newspapers",
+          "size": 4250},
+          {"name": "Novels",
+          "size": 3601}
+          
+
+        ]
+
+      } 
+
+    ]
+}

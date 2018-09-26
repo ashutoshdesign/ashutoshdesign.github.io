@@ -1,0 +1,1589 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106824714-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106824714-1');
+    </script>
+
+    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Gestures</title>
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main_screen_settings.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
+    <link href="css/slider-1.css" rel="stylesheet">
+    <link href="css/slider-2.css" rel="stylesheet">
+    <link href="css/slider-3.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+
+    <!-- For TImeline -->
+
+    <link rel="stylesheet" href="css/timeline/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/timeline/style.css"> <!-- Resource style -->
+  <link rel="stylesheet" href="css/timeline/demo.css"> <!-- Demo style -->
+
+  
+
+    
+  
+    <!--Google Webfont-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+   
+
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- D3.js -->  
+    
+    
+    <script src="js/d3.layout.chord.sort.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+
+    <style>
+
+    /* D3 */
+
+    
+
+    /* Another option */
+
+    
+
+    @font-face {
+      font-family: "Bebas Neue";
+      src: url(fonts/BebasNeue-webfont.woff) format('woff');
+
+      }
+
+      @font-face {
+        font-family: "CallunaLghtRegular";
+        src: url(fonts/Calluna-Regular.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: "Calluna Italic";
+        src: url(fonts/Calluna-It-webfont.woff) format('woff');
+      }
+
+    body {
+
+        background-color: #e9edef;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        font-size: 24px;
+        color: #252B33;
+    }
+
+
+    /* Provisional Min-width: 768px */
+
+
+
+    .project-heading-type-2{
+      font: 200 2.4rem/2.8rem "Bebas Neue", sans-serif;
+      margin-top: 3.2%;
+      margin-bottom: 2%;
+    }
+
+    .project-content {
+      font: 200 2.0rem/2.8rem "CallunaLghtRegular", sans-serif;
+    }
+
+    .project-heading-type-3 {
+      font: 200 3.2rem/0rem "Bebas Neue", sans-serif;
+      margin-top: 5.76%;
+      
+
+    }
+
+    .project-heading-type-5{
+
+      font: 200 2.0rem/2.8rem "Bebas Neue", sans-serif;
+      margin-top: 3.2%;
+      margin-bottom: 2%;
+
+    }
+
+    .project-2-features-right{
+    	margin-top: 6%; 
+    	background-image: url('images/project-2-feature-right.png');
+    	background-position-x: 50%;
+	    background-position-y: 70%;
+	    background-repeat: no-repeat;
+	    background-size: 1240px 520px;
+	    
+
+	}
+
+	.project-2-features-left{
+    	margin-top: 6%; 
+    	background-image: url('images/project-2-feature-left.png');
+    	background-position-x: 50%;
+	    background-position-y: 70%;
+	    background-repeat: no-repeat;
+	    background-size: 1240px 520px;
+	    
+
+	}
+
+  .background-color-text{
+    background-color: #fafafa;
+    border-bottom-right-radius: 2%;
+    border-bottom-left-radius: 2%;
+    padding: 3% 4% 4% 8%;
+  }
+
+  .background-color-images{
+    background-color: #fafafa;
+    
+    border-top-right-radius: 2%;
+    border-top-left-radius: 2%;
+  }
+
+  .image-heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: helvetica neue;
+    color: #f5f5f5;
+    
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 2%;
+  }
+
+    /* Minimum width- 1100px */
+
+    .project-margin-adjust {
+        padding: 0% 0% 0% 0%;
+    }
+
+    .project-main-heads-white{
+      padding-top: 2%;
+      padding-bottom: 4%;
+    }
+
+    .project-main-heads-grey{
+      padding-top: 2%;
+      padding-bottom: 4%;
+    }
+
+    .pre-slider-image-row{
+      margin-top: 4%;
+    }
+
+    .pre-slider-image-container {
+      position: relative;
+      
+    }
+
+    .pre-slider-images {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .competition-margin-adjust{
+    	margin: 8% 0 6% 0;
+    }
+
+    .pre-slider-image-overlay {
+      position: absolute;
+      top: 2%;
+      bottom: 90%;
+      left: 2%;
+      right: 90%;
+      height: 32px;
+      width: 32px;
+      opacity: 0.75;
+      border-radius: 30%;
+      /*transition: .5s ease*/;
+      background-color: #000000;
+    }
+
+    .pre-slider-image-container:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .no-slider-image{
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border: 1px solid black;
+    }
+
+    .fs {
+      color: white;
+      font-size: 3.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 50; /* Sit on top */
+        padding-top: 5%; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        filter: drop-shadow(8px 8px 10px gray);
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close-btn {
+        margin-left: 96%;
+    	margin-top: -20%;
+    	font-size: 48px;
+    	color: white;
+    }
+
+    .close-btn:hover{
+    	cursor: pointer;
+    }
+
+    
+
+    .modal-header {
+        padding: 16px 16px;
+        font-size: 24px;
+        color: #212121;
+        display: none;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .1);
+    }
+
+    .modal-header h2{
+      font-size: 24px;
+      font-weight: 600;
+      
+    }
+
+    .modal-body {padding: 2px 0px; background-color: #000000}
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+        display: none;
+    }
+
+    
+    .carousel-inner > .item > img {
+      width:auto; 
+      display: block;
+      margin:auto;
+      min-height: 550px;
+      max-height: 600px;
+    
+    }
+
+
+    .carousel-control{
+      opacity: 0.5;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      
+      background-image: none;
+    }
+
+    .carousel-control.right:hover{
+      opacity: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      background-image: none;
+     
+    }
+
+    .carousel-control.left:hover{
+      opacity: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      background-image: none;
+     
+    }
+
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+      width: 40px;
+      height: 40px;
+      margin-top: -10px;
+      font-size: 40px;
+    }
+
+    .carousel-indicators .active{
+      width: 16px;
+      height: 16px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      margin: 5px;
+    
+
+    }
+
+    .carousel-indicators li{
+      width: 16px;
+      height: 16px;
+      margin: 5px;
+      border: 1px solid rgba(189, 189, 189,0.75);
+      background-color: rgba(189, 189, 189,0.75);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      
+
+    }
+
+    .pre-slider-image-container{
+      border: 1px solid black;
+    }
+
+    /* min-width 992px */
+
+    .project-insight-width{
+      width: 50%;
+    }
+
+
+
+    /* All sizes */
+    .project-highlights-stats-number {
+      font: 200 3.2rem/4.0rem "Calluna Italic", serif;
+    }
+
+    .project-highlights-stats {
+      font: 200 2.0rem/2.8rem "Calluna Italic", serif;
+    }
+
+    /*Timeline for conceptualization */
+
+
+   
+
+
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+
+      <!--Mobile + Desktop-->
+        <div class="mobile container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
+                </div>
+                </div>
+
+
+
+            <div class="row" style="margin-bottom: 1.5rem">
+
+              <div class="col-xs-4" style="text-align: right;">
+                <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
+              </div>
+
+              <div class="col-xs-4" style="text-align: center;">
+                <a class="link" href="about.html"><span class="nav_link">About</span></a>
+              </div>
+
+              <div class="col-xs-4">
+                <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
+              </div>
+              
+
+
+            </div>
+        </div>
+        <!--End of Mobile + below 1000px-->
+
+        <!-- /.container -->
+
+        <!--Start of Navbar for Desktop Version-->
+
+        <div class="desktop container-fluid desktop_navbar">
+          <div class="row">
+
+            <!--div class="col-lg-1"></div-->
+
+            <div class="col-lg-2 col-md-1">
+              <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
+            </div>
+
+            <div class="col-lg-6 col-md-7">
+            <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
+            </div>
+
+
+            <div class="col-lg-2 col-md-2" style="text-align: right;">
+              <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+              <a class="link" href="about.html" style="text-align: center;"><span class="nav_link">About</span></a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+              <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
+            </div>
+            
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <!--End of Navbar Desktop-->
+    </nav>
+
+    <!--End of Navigation-->
+
+
+    <!--Project 2-->
+
+
+    <!--Project Intro-->
+
+      <div class="project-intro" style="padding-top: 4%">
+
+
+          <div style="position: relative">
+            <img src="images/Project-5/logo.png" style="position: absolute; left: 15%; width: 20%; ">
+            <h2 style="position: absolute; left: 40%; margin-top: 3%">7th</h2>
+            <h5 style="position: absolute; left: 48%; margin-top: 2%">International Conference on</h5>
+            <h3 style="position: absolute; left: 48%; margin-top: 4.5%; font-size: 22px">Research into Design</h3>
+            <h5 style="position: absolute; left: 48%; margin-top: 9%">9-11 January 2019 | Bangalore</h5>
+          </div>
+          <p class="project-1-photo-description" style="color: #ef5350; margin-bottom: 1%; margin-top: 16%">"Research paper accepted |  To be published in Springer Proceedings"</p>
+
+          <h1 class="project-title">
+                Exploring Gestures in VR
+
+          </h1>
+
+          <div class="project-intro-text-div">
+            <p class="project-intro-text">
+                Gestures are a way of interacting that have become popular for Virtual Reality systems. With a rich gestural heritage of India, culturally compliant interactions can be designed using gestures. But would Indian users accept such a novel technique?
+               <br><br>This is an ongoing project since December'17, under the guidance of <a href="https://www.iitg.ac.in/design/portfolio/py/Prof.%20Pradeep%20Gururaj%20Yammiyavar%20_%20Department%20of%20Design.html" class="project-link">Prof. Pradeep Yammiyavar</a>, Director, <a href="http://iitg.ac.in/uelab/about.html" class="project-link">UE/HCI Lab</a>, Indian Institute of Technology Guwahati, India.
+
+
+            </p>
+          </div>
+
+
+      </div>
+
+      <div class=""><img class="intro-image" src="images/Project-5/intro.jpg"></div>
+
+    <!--My Role-->
+
+        <div class="project-main-heads-grey">
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-xs-12 project-margin-adjust">
+
+                  <h3 class="project-heading-type-5">
+                    Project Overview
+                  </h3>
+
+                  <h2 class="project-heading-type-3" style="margin-top: 0">
+                    "The one where I played a researcher, designer and developer"
+                  </h2>
+
+                  <p class="project-content">
+                    In India, gestures form an essential part of the <span class="project-highlight-1">rich non-verbal body communication spectrum</span>. Gesture-based interactions can <span class="project-highlight-1">overcome the language barrier</span> posed by the <span class="project-highlight-1">diversity in culture</span> and <span class="project-highlight-1">pronounced digital illiteracy</span> in India. However, <span class="project-highlight-1">acceptance of gestures</span> among Indian users remains <span class="project-highlight-1">underexplored</span>.
+                    <br><br>
+                    In this project, I <span class="project-highlight-1">designed</span> and <span class="project-highlight-1">prototyped</span> interactions based on <span class="project-highlight-1">hand gestures</span>, <span class="project-highlight-1">natural-object interaction</span> and <span class="project-highlight-1">headgaze</span> in <span class="project-highlight-1">VR environment</span>. I performed a comparative study in the context of online financial transaction to evaluate <span class="project-highlight-1">user preference</span>, <span class="project-highlight-1">workload</span> and <span class="project-highlight-1">usability</span>. I analyzed this data using <span class="project-highlight-1">statistical</span> and <span class="project-highlight-1">thematic analysis</span> and derived conclusive findings. 
+        
+
+
+                 </p>
+
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+    <!--Process-->
+
+      <div class="project-main-heads-white">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h2 class="project-heading-type-3">
+                    Interative design process
+                </h2>
+                <p class="project-content">
+                  The goal of the project was to obtain valuable insights on <span class="project-highlight-1">how users perceive gestures</span> as a method of interaction in VR. So, we <span class="project-highlight-1">prototyped an experience with gestures</span> which helped reveal those insights.
+                </p>
+                
+                <img class="process-image" src="images/Project-5/process.png" style="width: 40%; margin-top: 2%">
+
+                <!-- [Fig showing design process- 1. User Study 2. Prototyping 3. Analysis 4. Vis Design] -->
+                
+              </div>
+            </div>
+          </div>
+
+          
+
+      </div>
+
+<!-- The Modal -->
+            <div id="myModal" class="modal">
+              <i class="material-icons close-btn">
+                  close
+                </i>
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  
+                  <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+
+                  <!-- Carousel -->
+                  <div id="productCarousel" class="carousel slide" data-ride="carousel" style="">
+                    <ol class="carousel-indicators">
+                      
+                    </ol>
+                    <div class="carousel-inner" style="">
+                      
+                    </div>
+                    <a class="left carousel-control" href="#productCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#productCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                  <h3>Modal Footer</h3>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- End of Modal -->
+
+
+  <!--User Study-->
+
+  <div class="project-main-heads-grey">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h6 class="project-heading-type-5">
+                    Prototyping
+                </h6>
+
+                 <!--Leap Motion is really cool-->
+
+                <h3 class="project-heading-type-3">
+                    “Tinkering with Leap Motion”
+                </h3>
+
+                <p class="project-content">
+                Leap Motion is a sensor device that <span class="project-highlight-1">supports hand and finger movement as input</span>. I was <span class="project-highlight-1">curious to explore the numerous possibilities</span> of this device. So, I started the project by prototyping <span class="project-highlight-1">two interfaces</span> based on <span class="project-highlight-1">gestural interaction</span> and <span class="project-highlight-1">natural-object interaction</span> for number-entry. I used Leap Motion with Unity3D to develop the prototypes for HTC Vive. This was also my initial exposure to Virtual Reality (VR).
+                </p>
+
+
+                
+                
+                
+
+
+          </div></div>
+
+          
+
+          <div class="row" style="margin-top: 8%; margin-bottom: 4%">
+            <div class="col-xs-12">
+
+             
+
+              <div class="col-sm-6 col-md-6 col-lg-6">
+                
+                <img class="no-slider-image" src="images/Project-5/tinkering1.jpg" style="width: 100%; display:block; margin: auto">
+                <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Push a number cube to select it which then falls down</p>
+              </div>
+
+              <div class="col-sm-6 col-md-6 col-lg-6">
+                 <img class="no-slider-image" src="images/Project-5/tinkering2.jpg" style="width: 100%; display:block; margin: auto">
+                 <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Extend seven fingers to input '7'</p>
+              </div>
+
+              
+
+            </div>
+          </div>
+
+          <!--div class="row" style="margin-top: 8%; margin-bottom: 4%">
+            <div class="col-xs-12">
+
+              <div class="col-sm-2 col-md-2 col-lg-2"></div>
+
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <img src="images/Project-5/vrleap.png" style="width: 100%; display: block; margin: auto">
+              </div>
+
+              <div class="col-sm-2 col-md-2 col-lg-2">
+                 <img src="images/Project-5/unity.png" style="width: 100%; display: block; margin: auto; margin-top: 10%">
+              </div>
+
+              <div class="col-sm-4 col-md-4 col-lg-4"></div>
+
+            </div>
+          </div-->
+
+
+
+
+
+        </div>
+
+  </div>
+  <!--End of Prototyping 1 -->
+
+  <!--“Understanding 3D user interfaces”-->
+
+  <div class="project-main-heads-white">
+
+        
+            
+
+                <div class="container">
+                  <div class="row" style="">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                      <h6 class="project-heading-type-5">
+                          Literature Review
+                      </h6>
+
+                      
+
+                      <h3 class="project-heading-type-3">
+                          “Understanding 3D user interfaces”
+                      </h3>
+
+                	 
+	                     <p class="project-content">
+	                       After having explored Leap Motion, I read numerous research papers on <span class="project-highlight-1">3D interaction techniques</span>, <span class="project-highlight-1">VR interface guidelines</span> and <span class="project-highlight-1">3D menu systems</span> to familiarize myself with existing research and <span class="project-highlight-1">find any gaps</span>. The <span class="project-highlight-1">research questions</span> I was trying to address were-
+
+	                     </p>
+
+                      
+                
+
+                     </div>  
+                   </div>
+
+                   <div class="row">
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="project-2-highlights-div">
+                          <p class="project-highlights-stats">“Would Indian users prefer interacting with hand gestures?”</p>
+                        </div>
+                        
+                      </div>
+
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                         <div class="project-2-highlights-div">
+                          <p class="project-highlights-stats">“What are the problems associated with this interaction technique?” </p>
+                        </div>
+                        
+                      </div>
+
+                    </div>
+
+                    <!-- Moodboard showing inspirations- tulip, rapmenu, fingercount menus, see references -->
+                     <img class="no-slider-image" src="images/Project-5/moodboard.jpg" style="width: 100%; display:block; margin: auto">
+                     <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Exploring 'system control interactions' in VR</p>
+
+
+                 </div>
+
+ </div>
+
+  <!--End of Understanding 3D user interfaces-->  
+
+    <div class="project-main-heads-grey">
+
+     <div class="container">
+        <div class="row">
+          <div class="col-xs-12 project-margin-adjust">
+
+            <h6 class="project-heading-type-5">
+                Conceptualization
+            </h6>
+
+             <!--How would transactions in VR look like?-->
+
+            <h3 class="project-heading-type-3">
+                “How would transactions in VR look like?”
+            </h3>
+
+             <p class="project-content">
+              Based on findings from my literature review, I <span class="project-highlight-1">conceptualized two VR interfaces</span> based on the two interaction techniques for the <span class="project-highlight-1">comparative study</span>. The <span class="project-highlight-1">context of comparative study</span> I chose was a quotidian task- an <span class="project-highlight-1">online transaction</span> after purchasing any product or service online. I broke down the task into 3 parts- 1) Selection of mode of payment, 2) Selection of Credit Card and 3) PIN Entry. 
+            </p>
+
+            
+
+      </div>
+    </div>
+
+<!-- Task 1 -->
+
+      <div class="row" style="margin-top: 4%">
+        <div class="col-xs-12">
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <h3 class="project-heading-type-3" style="text-align: center">
+                           Gestural Interaction
+           </h3>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <h3 class="project-heading-type-3" style="text-align: center">
+                          Natural Object Interaction
+           </h3>
+          </div>
+
+
+          
+      </div>
+    </div>
+
+      <div class="row">
+        <div class="col-xs-12" style="text-align: center; margin-top:2%">
+          <h3 class="project-highlights-stats" style="">1. Selection of mode of payment</h3>
+          <div style="background-color: rgb(181, 26, 23); width: 0.1%; display: block; margin: auto; height: 40px;"></div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12" style="margin-top: 1%;">
+
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            
+           
+              
+              <img src="images/Project-5/task1-1.gif" style="width:100%" class="background-color-images">
+           
+          </div>
+
+          
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+           
+             
+              <img src="images/Project-5/task2-1.gif" style="width:100%" class="background-color-images">
+            
+            
+
+          </div>
+
+
+
+            
+          
+        </div>
+      </div>
+
+      <div class="row">
+         <div class="col-xs-12" style="margin-bottom: 4%">
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <ul class="background-color-text">
+              <li class="project-content"><span class="project-highlight-1">Body-referenced</span> menus for textual items for good visibility</li>
+              <li class="project-content">Menu items as <span class="project-highlight-1">labels on fingertips on facing palm towards headset</span></li>
+              <li class="project-content">Selection using <span class="project-highlight-1">pinch gesture</span> followed by sound feedback</li>
+              <li class="project-content">Active and inactive labels interchangeable using "more" label on pinky finger</li>
+            </ul>
+            
+          </div>
+
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <ul class="background-color-text">
+              <li class="project-content">Menu items appear on a <span class="project-highlight-1">body-referenced panel</span> with two rows of buttons</li>
+              <li class="project-content">Panel appears on facing <span class="project-highlight-1">palm towards headset</span></li>
+              <li class="project-content">Selection is done by <span class="project-highlight-1">‘pressing and releasing’</span> the menu item with index finger of dominant hand</li>
+              <li class="project-content"><span class="project-highlight-1">Pseudo-haptic feedback</span> using sound and change in color of the button</li>
+              
+            </ul>
+            
+          </div>
+
+         </div>
+      </div>
+
+<!-- End of Task 1 -->
+
+<!-- Task 2 -->
+
+      <div class="row">
+        <div class="col-xs-12" style="text-align: center; margin-top:2%">
+          <h3 class="project-highlights-stats" style="">2. Selection of credit card</h3>
+          <div style="background-color: rgb(181, 26, 23); width: 0.1%; display: block; margin: auto; height: 40px;"></div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12" style="margin-top: 4%;">
+
+
+         <div class="col-sm-6 col-md-6 col-lg-6">
+            
+           
+              
+              <img src="images/Project-5/task1-2.gif" style="width:100%" class="background-color-images">
+           
+          </div>
+
+          
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+           
+             
+              <img src="images/Project-5/task2-2.gif" style="width:100%" class="background-color-images">
+            
+            
+
+          </div>
+
+
+            
+          
+        </div>
+      </div>
+
+      <div class="row">
+         <div class="col-xs-12" style="margin-bottom: 4%">
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <ul class="background-color-text">
+              <li class="project-content"><span class="project-highlight-1">World-referenced</span> menu with <span class="project-highlight-1">visual items</span> (credit cards) arranged in a curved rectangular arrangement</li>
+              <li class="project-content">Cards are labeled 1-6 and a card is selected via  <span class="project-highlight-1">finger counting gesture</span>, followed by feedback sound.</li>
+              <li class="project-content">Extend the number of fingers to denote the desired numeral</li>
+              
+            </ul>
+          </div>
+
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <ul class="background-color-text">
+              <li class="project-content"><span class="project-highlight-1">World-referenced</span> menu with <span class="project-highlight-1">visual items</span> (credit cards) arranged in a <span class="project-highlight-1">curved rectangular arrangement</span></li>
+              <li class="project-content">The relevant card is selected by <span class="project-highlight-1">‘pressing and releasing’</span> it using the index finger of either hand</li>
+             
+              <li class="project-content"><span class="project-highlight-1">Pseudo-haptic feedback</span> using sound and change in color of the button</li>
+              
+            </ul>
+            
+          </div>
+
+         </div>
+      </div>
+
+<!-- End of Task 2 -->
+
+<!-- Task 3 -->
+
+      <div class="row">
+        <div class="col-xs-12" style="text-align: center; margin-top:2%">
+          <h3 class="project-highlights-stats" style="">3. Entering 4-digit PIN</h3>
+          <div style="background-color: rgb(181, 26, 23); width: 0.1%; display: block; margin: auto; height: 40px;"></div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12" style="margin-top: 4%;">
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            
+           
+              
+              <img src="images/Project-5/task1-3.gif" style="width:100%" class="background-color-images">
+           
+          </div>
+
+          
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+           
+             
+              <img src="images/Project-5/task2-3.gif" style="width:100%" class="background-color-images">
+            
+            
+
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="row">
+         <div class="col-xs-12" style="margin-bottom: 8%">
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <ul class="background-color-text">
+              <li class="project-content">The selected card is displayed and PIN is entered using finger-count gestures</li>
+              
+            </ul>
+            
+          </div>
+
+
+          <div class="col-sm-6 col-md-6 col-lg-6">
+            <ul class="background-color-text">
+              <li class="project-content">A panel similar to that in Task 1 appears as the left-palm faces the headset</li>
+              
+              
+            </ul>
+            
+          </div>
+
+         </div>
+      </div>
+
+<!-- End of Task 3 -->
+<!--Finger count gestures-->
+      <div class="row">
+          <div class="col-xs-12 project-margin-adjust" style="">
+
+           
+             <!--Fingercount gestures explained-->
+
+            <h3 class="project-heading-type-3">
+                “What are finger-count gestures again?”
+            </h3>
+
+             <p class="project-content">
+              Literatures say that finger-count gestures have performed well for <span class="project-highlight-1">menu selection tasks</span> in a desktop environment and hold potential for numerical input in VR environment as well. Also, they have been suggested for <span class="project-highlight-1">hands-free numerical input</span>.
+            </p>
+
+            <p class="project-content">
+              Since multiple practices are followed in India to gesture a numerical digit, the design of finger-count gestures was<span class="project-highlight-1"> not restricted to a single set of hand poses</span>. It considered the <span class="project-highlight-1">number of extended fingers</span> held by either or both of the dominant and non- dominant hands.
+            </p>
+
+            
+            
+
+        </div>
+      </div>
+
+       <div class="row">
+          <div class="col-xs-12 project-margin-adjust" style="margin-bottom:8%">
+
+           
+             <!--Additional interactions-->
+
+            <h3 class="project-heading-type-3" style="">
+                “Additional gesture interactions”
+            </h3>
+
+             <p class="project-content" style="margin-bottom: 5%">
+              Apart from finger-count gestures, other common gestures enabled other functionalities. A <span class="project-highlight-1">thumbs-up gesture</span> of the right hand was used to <span class="project-highlight-1">confirm</span> a selection whereas a <span class="project-highlight-1">cancellation</span> is exhibited using the <span class="project-highlight-1">index fingers of both hands joined in the form of a cross</span>. 
+            </p>
+
+            <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-5/confirm.png" style="width: 100%; display:block; margin: auto">
+             <p class="project-1-photo-description" style="margin: 3% 0% 3% 0%">Confirmation gesture</p>
+           </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-5/cancel.png" style="width: 100%; display:block; margin: auto">
+               <p class="project-1-photo-description" style="margin: 3% 0% 3% 0%">Cancellation gesture</p>
+            </div>
+
+            
+
+            
+            
+
+        </div>
+      </div>
+
+            
+
+
+    </div>
+</div>
+              
+
+    <!--User Study 1-->
+
+      <div class="project-main-heads-white">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h6 class="project-heading-type-5">
+                    User Study
+                </h6>
+
+                 <!--16 seems achievable-->
+
+                <h3 class="project-heading-type-3">
+                    “The first time I conducted a usability study, I had no clue”
+                </h3>
+
+                <p class="project-content">
+                  A <span class="project-highlight-1">within-group study</span> with <span class="project-highlight-1">20 users</span> was conducted to compare the two interactions. <span class="project-highlight-1">Undergraduate students</span> aged between 18-22 years exhibiting a <span class="project-highlight-1">tech-savvy behavior</span> volunteered for the experiment. None of the users had prior experience with any VR application. However they all were proficient in making online transaction using smartphones and desktops. The experiment duration ranged from <span class="project-highlight-1">40-50 mins</span>. 
+                </p>
+
+                <p class="project-content">
+                  Independent variables include (1) <span class="project-highlight-1">Two VR interfaces</span> and (2) <span class="project-highlight-1">Past experience of participants in VR</span>. Dependent variables include (1) <span class="project-highlight-1">Task completion time</span>, (2) <span class="project-highlight-1">Workload</span> and (3) <span class="project-highlight-1">System Usability</span>. 
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Fig for user study 1 -->
+            
+            <img class="no-slider-image" src="images/Project-5/us1.jpg" style="width: 100%; display:block; margin: auto; border: 1px solid #e0e0e0; margin-top: 6%;">
+
+            <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Experiment Process for User Study 1</p>
+
+      </div>
+
+    </div>
+
+    <!-- End of user study 1 -->
+
+      <div class="project-main-heads-grey">
+
+          <!-- Analysis 1-->
+
+            <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                      <h6 class="project-heading-type-5">
+                          Analysis
+                      </h6>
+
+                       <p class="project-highlights-stats">*I would love to discuss with you personally, the actual results and its implications. However, they can't be revealed here before the actual publication.</p>
+
+                      <h3 class="project-heading-type-3">
+                          “Findings from statistical analysis”
+                      </h3>
+
+                      <p class="project-content">
+                        I used statistical analysis methods to derice results from the data. The data was found to be <span class="project-highlight-1">normally distrbuted</span>. I used <span class="project-highlight-1">paired-t test on SPSS anaysis</span> software to compare means to find if the differences were statistically significant. Interesting inferences were drawn from the audio-recorded interviews.
+                      </p>
+                      
+                      <!-- Figure with blurred writing and locked -->
+
+                      
+
+                      <h3 class="project-heading-type-3">
+                          “What challenges did I face during this experiment?”
+                      </h3>
+
+                      <p class="project-content" style="margin-bottom: 3%">
+                        I was met with numerous challenges while conducting the above study. The <span class="project-highlight-1">technical constraints</span> posed by the Leap Motion often <span class="project-highlight-1">frustrated accurate data readings</span>. This may also have <span class="project-highlight-1">biased the users' preferences</span>. Also, the interface was more <span class="project-highlight-1">complex than required</span>. This <span class="project-highlight-1">increased the learning time</span> and hence study time as both techniques. Further, I realized that I needed a <span class="project-highlight-1">new set of metrics to evaluate user preference</span> for a culturally diverse setting like India.   
+                        
+                      </p>
+                      
+
+            </div></div></div>
+
+    
+
+        
+
+
+    </div>
+
+      <!-- Literature Review 2 -->
+      <div class="project-main-heads-white">
+
+            <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                      <!--Lit review-->
+
+                      <h6 class="project-heading-type-5">
+                          Literature Review
+                      </h6>
+
+                      <h3 class="project-heading-type-3">
+                          “Digging the literature again”
+                      </h3>
+
+                      
+                      <p class="project-content">
+                        Based on the findings from the previous experiment, I decided to reduce the complexity of my experiment. I shifted my <span class="project-highlight-1">focus completely on the PIN entry task</span> to evaluate user acceptance. Of the numerous insights I obtained from my review, the <span class="project-highlight-1">following two drove the rest of my study</span>-                      
+                      </p>
+                      
+                     
+
+            </div></div>
+
+            <div class="row" style="margin-bottom: 3%">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="project-2-highlights-div">
+                    <p class="project-highlights-stats">"Higher performance and perceived ease of use and usefulness fasten the acceptance of a new technology in India”</p>
+                  </div>
+                  
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                   <div class="project-2-highlights-div">
+                    <p class="project-highlights-stats">“Headgaze pointing has been found to be intuitive and a preferred technique for hands-free text-entry”</p>
+                  </div>
+                  
+                </div>
+
+              </div>
+
+           
+
+
+      </div>
+
+
+    <!--Conceptualization 2-->
+
+    <div class="project-main-heads-grey">
+
+            <div class="container" style="">
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 5%">
+
+                      
+                      <h6 class="project-heading-type-5">
+                          Conceptualization
+                      </h6>
+
+                      <h3 class="project-heading-type-3">
+                          “Learning from the mistakes”
+                      </h3>
+
+                      <p class="project-content">
+                        The second study also consisted of two interfaces but involved <span class="project-highlight-1">headgaze interaction</span> instead of natural-object interaction.
+
+                      </p>
+                      
+
+                    </div>
+                  </div>
+
+                  <div class="row" style="margin: 4% 0% 0% 0%;">
+                    <div class="col-xs-12">
+
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <img class="no-slider-image" src="images/Project-5/task3.png" style="width: 100%; display:block; margin: auto">
+                      </div>
+                       
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                         <p class="project-content" style="margin-top: 20%">
+                          The headgaze interface consisted of a regular <span class="project-highlight-1">number keypad derived from 2D GUIs</span>. The input was given by pointing at the desired digit using <span class="project-highlight-1">headgaze</span> with a <span class="project-highlight-1">dwell time of 1000ms</span> (recommended duration for novice users).
+
+                        </p>
+                      </div>
+
+                   </div>
+                 </div>
+
+                 <div class="row" style="margin: 4% 0% 6% 0%;">
+                    <div class="col-xs-12">
+
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                        <img class="no-slider-image" src="images/Project-5/task4.png" style="width: 100%; display:block; margin: auto">
+                      </div>
+                       
+                      <div class="col-lg-6 col-md-6 col-sm-6">
+                         <p class="project-content" style="margin-top: 20%">
+                          Number-entry in the gestural interface remained unchanged except for the change in feedback. The <span class="project-highlight-1">acceptance of a digit was dwell-based</span> where participants held a gesture for <span class="project-highlight-1">1000ms</span> (denoted by a <span class="project-highlight-1">circular progress bar</span>).
+
+                        </p>
+                      </div>
+
+                   </div>
+                 </div>
+
+
+            </div>
+
+                      
+                    
+
+
+    </div>
+
+    <!-- End of conceptualization 2 -->
+
+    <!-- Prototyping 2 -->
+
+    <div class="project-main-heads-white">
+
+      <div class="container" style="">
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 5%">
+
+                      
+                      <h6 class="project-heading-type-5">
+                          Prototyping
+                      </h6>
+
+                      <h3 class="project-heading-type-3">
+                          “Wizard of Oz with Leap motion”
+                      </h3>
+
+                      <p class="project-content">
+                        Prototyping headgaze-based interface was fairly simple using Unity3D and Cardboard SDK. But <span class="project-highlight-1">how do I circumvent the technical constraints of the Leap Motion controller?</span> So, I got out my developer mindset and put my "design-thinking" cap on. <span class="project-highlight-1">Wizard of Oz</span> was clearly the way out. 
+
+                      </p>
+                      <br>
+                      <p class="project-content">
+                        While the Leap Motion enabled visual feedback of hands in VR, <span class="project-highlight-1">I played the wizard</span> and controlled all the functions triggered inside the scene. The experimental set-up was such that I could watch and control the ongoing VR scenes using my computer (I wouldn't delineate the specifics of the setup here). I <span class="project-highlight-1">meticulously timed and triggered all functions</span> using <span class="project-highlight-1">shortcut keys on my keyboard</span>. This way I contrived to deliver a seamless user experience <span class="project-highlight-1">eliminating any bias or erroneous readings</span>.
+
+                      </p>
+                      
+
+                    </div>
+                  </div>
+
+                  
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+<!-- End of Prototyping 2 -->
+
+<!--User Study 2-->
+
+      <div class="project-main-heads-grey">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h6 class="project-heading-type-5">
+                    User Study
+                </h6>
+
+                 <!--16 seems achievable-->
+
+                <h3 class="project-heading-type-3">
+                    “Usability study Part II”
+                </h3>
+
+                <p class="project-content">
+                  A <span class="project-highlight-1">within-group study</span> with <span class="project-highlight-1">20 users</span> was conducted to compare the two interactions. <span class="project-highlight-1">Undergraduate students</span> aged between 18-22 years exhibiting a <span class="project-highlight-1">tech-savvy behavior</span> volunteered for the experiment. None of the users had prior experience with any VR application. The experiment duration ranged from <span class="project-highlight-1">20-30 mins</span>. 
+                </p>
+
+                <p class="project-content">
+                  Independent variables included (1) <span class="project-highlight-1">Two VR interfaces for PIN-entry</span> and (2) <span class="project-highlight-1">Past experience of participants in VR</span>. Dependent variables included (1) <span class="project-highlight-1">Task completion time</span>, (2) <span class="project-highlight-1">Perceived ease of use</span> and (3) <span class="project-highlight-1">Perceived usefulness</span>. 
+                </p>
+
+                <p class="project-content">
+                  In this study, I ensured the following two things while conducting the study. This, I believed, would heavily influence my data.
+                </p>
+                <ol class="project-content objective-list">
+                  <li><span class="project-highlight-1">Sufficient time and practice be given to users before the actual task</span></li>
+                  <li><span class="project-highlight-1">Participants be provided with a well articulated task-scenario sheet</span></li>
+                  
+                </ol>
+
+              </div>
+            </div>
+
+            <!-- Fig for user study 2 -->
+
+            
+            <img class="no-slider-image" src="images/Project-5/us2.jpg" style="width: 100%; display:block; margin: auto; border: 1px solid #e0e0e0; margin-top: 6%;">
+
+            <p class="project-1-photo-description" style="margin: 3% 0% 10% 0%">Experiment Process for User Study 2</p>
+
+            <!-- Fig for actual study -->
+
+            
+            <img class="no-slider-image" src="images/Project-5/usactual2.jpg" style="width: 80%; display:block; margin: auto; border: 1px solid #e0e0e0; margin-top: 6%;">
+            <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Clockwise from left- 1) Task Scenario, 2) Headgaze interaction user-study and 3) Gestural interaction user study</p>
+
+            <!-- Fig for task scenario sheet -->
+
+      </div>
+
+    </div>
+
+<!-- End of user study 2 -->
+
+     <div class="project-main-heads-white">
+
+          <!-- Analysis 2-->
+
+            <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                      <h6 class="project-heading-type-5">
+                          Analysis
+                      </h6>
+
+                       
+                      <p class="project-highlights-stats">*I would love to discuss with you personally, the actual results and its implications. However, they can't be revealed here before the actual publication.</p>
+
+                      <h3 class="project-heading-type-3">
+                          “Collating quantitative and qualitative findings”
+                      </h3>
+
+                      <p class="project-content">
+                        Literatures say that quantitative metrics like performance and perceived ease of use and usefulness positively affect the acceptance of technology in India. In this study, I <span class="project-highlight-1">expand the scope</span> of this model by <span class="project-highlight-1">collating these metrics with the qualitative responses</span>. I posited here that statistical findings alone wouldn't provide valuable insights to assess user preference in a diverse setting like India.
+                      </p><br>
+
+                      <p class="project-content">
+                        So, along with statistical analysis of quantitative data, I also <span class="project-highlight-1">performed a thematic analysis</span> (inspired by grounded theory) on the interview data. The common emerging themes revealed many <span class="project-highlight-1">serendipitous insights</span>.
+                      </p><br>
+                      
+                      <!-- Figure with blurred writing and locked -->
+
+
+                      
+                      
+
+            </div></div></div>
+
+    
+
+        
+
+
+    </div>
+
+
+        
+
+  <!--Learning Recap-->
+
+        <div class="project-main-heads-grey">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 project-margin-adjust">
+
+                  <h2 class="project-heading-type-2">
+                      Learnings Recap
+                  </h2>
+
+                    <p class="project-content" style="margin-bottom: 3%">
+                      This project was my first introduction to <span class="project-highlight-1">research into HCI</span> which has helped me <span class="project-highlight-1">develop a good understanding of experiment design</span>. This was also my rudimentary <span class="project-highlight-1">exposure to Virtual Reality</span>. I learnt to design and <span class="project-highlight-1">prototype simple VR interfaces</span> in <span class="project-highlight-1">Unity3D</span>, <span class="project-highlight-1">Leap Motion</span> and numerous other packages. This project has spurred by interest into exploring the domain of <span class="project-highlight-1">multimodal interaction techniques</span> and designing <span class="project-highlight-1">meaningful interactions</span> using them.
+
+
+
+                    </p>
+
+                  </div></div>
+
+                  
+
+          </div>
+
+            
+
+        </div>
+
+        
+
+
+
+
+
+      
+
+
+
+    <!--End of Project 2-->
+
+    <!--Back-->
+    <div class="project-1-back">
+      <a href="index.html" class="project-link" style="font-size: 1.0em; vertical-align: middle; color: rgba(239,83,80,0.75);"><i class="material-icons arrow-right" style="font-size: 1.0em">keyboard_backspace</i>Back to portfolio</a>
+    </div>
+
+
+    
+
+
+<!--Footer-->
+
+<div class="container-fluid footer">
+
+  <div class="row">
+
+    <div class="col-md-1 col-lg-1"></div>
+
+    <div class="col-md-5 col-lg-5">
+
+          <div class="row contact_info">
+                <div class="col-xs-12">
+                  <ul class="contact_info_ul">
+                    <li class="contact_info_li"><a style="padding-left: 0px;" href="mailto:ashutoshagrawaldesign@gmail.com" target="_top">ashutoshagrawaldesign@gmail.com</a></li>
+                    <span style="font-size: 2.4rem; vertical-align: middle;">&middot;</span>
+                    <li class="contact_info_li"><a href="https://www.linkedin.com/in/agrawal30/">LinkedIn</a></li>
+                    <span style="font-size: 2.4rem; vertical-align: middle;">&middot;</span>
+                    <li class="contact_info_li"><a href="https://www.facebook.com/ashutosh3028" style="border: 0px solid white">Facebook</a></li>
+
+                  </ul>
+                </div>
+
+          </div>
+
+    </div>
+
+    <div class="col-md-5 col-lg-5">
+
+              <div class="row copyright">
+                <div class="col-xs-12">
+                  <p class="copyright_info copy1">Website Designed and Developed by <a style="text-decoration: none; color: black" href="">Ashutosh Agrawal</a></p>
+                  <p class="copyright_info copy2">&copy;2017 Ashutosh Agrawal</p>
+                </div>
+              </div>
+
+  </div>
+
+  <div class="col-md-1 col-lg-1"></div>
+
+  </div>
+
+
+
+</div>
+
+<!--End of Footer-->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <!-- Custom JS-->
+    <script src="js/modal.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+    
+    <script src="js/slider.js"></script>
+    <script src="js/slider-1.js"></script>
+    <script src="js/slider-2.js"></script>
+    <script src="js/slider-3.js"></script>
+    <!--script src="js/persona-slider.js"></script-->
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
+    <!-- Bootstrap Core JavaScript -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- d3 js -->
+    <script src="js/script.js"></script>
+    <script src="js/subsystem.js"></script>
+
+    <script src="js/bootstrap.tooltip.js"></script>
+    <script src="js/bootstrap.popover.js"></script>
+
+
+
+
+    </body>
+    </html>
