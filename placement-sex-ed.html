@@ -179,6 +179,27 @@
 
     /* Provisional Min-width: 768px */
 
+    .placement-project{
+      border: 1px solid black;
+      border-radius: 4px;
+
+    }
+
+    .placement-project:hover{
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      border-radius: 4px;
+
+    }
+
+    .placement-project-active{
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+       border: 1px solid black;
+       border-radius: 4px;
+      
+    }
+
 
 
     .project-heading-type-2{
@@ -478,31 +499,24 @@
       <!--Mobile + Desktop-->
         <div class="mobile container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="row">
-              <div class="col-xs-12">
-                <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
-              </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12">
-                <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
-                </div>
-                </div>
-
-
+           
 
             <div class="row" style="margin-bottom: 1.5rem">
 
-              <div class="col-xs-4" style="text-align: right;">
-                <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
+              <div class="col-xs-3" style="text-align: right;">
+                <a class="link" href="placement-haptipedia.html"><span class="nav_link active"><img src="images/haptipedia.jpg" style="width: 100%" class="placement-project"></span></a>
               </div>
 
-              <div class="col-xs-4" style="text-align: center;">
-                <a class="link" href="about.html"><span class="nav_link">About</span></a>
+              <div class="col-xs-3" style="text-align: center;">
+                <a class="link" href="placement-gestures.html"><span class="nav_link"><img src="images/sex-ed.jpg" style="width: 100%" class="placement-project-active"></span></a>
               </div>
 
-              <div class="col-xs-4">
-                <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
+              <div class="col-xs-3">
+                <a class="link" href="placement-right-time.html" target="_blank"><span class="nav_link"><img src="images/right-time.jpg" style="width: 100%" class="placement-project"></span></a>
+              </div>
+
+              <div class="col-xs-3">
+                <a class="link" href="placement-sex-ed.html" target="_blank"><span class="nav_link"><img src="images/gestures.jpg" style="width: 100%" class="placement-project"></span></a>
               </div>
               
 
@@ -515,29 +529,41 @@
 
         <!--Start of Navbar for Desktop Version-->
 
-        <div class="desktop container-fluid desktop_navbar">
+        <div class="desktop container desktop_navbar">
           <div class="row">
 
             <!--div class="col-lg-1"></div-->
 
-            <div class="col-lg-2 col-md-1">
-              <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
+            <div class="col-lg-2 col-md-2">
+              
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <a class="link" href="placement-haptipedia.html"><span class="nav_link"><img src="images/haptipedia.jpg" style="width: 100%" class="placement-project"></span></a>
+              
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <a class="link" href="placement-sex-ed.html"><span class="nav_link"><img src="images/sex-ed.jpg" style="width: 100%" class="placement-project-active"></span></a>
+              
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <a class="link" href="placement-right-time.html"><span class="nav_link"><img src="images/right-time.jpg" style="width: 100%" class="placement-project"></span></a>
+              
+            </div>
+            <div class="col-lg-2 col-md-2">
+              <a class="link" href="placement-gestures.html"><span class="nav_link"><img src="images/gestures.jpg" style="width: 100%" class="placement-project"></span></a>
+              
+
             </div>
 
-            <div class="col-lg-6 col-md-7">
-            <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
+            <div class="col-lg-2 col-md-2">
+              
             </div>
 
 
-            <div class="col-lg-2 col-md-2" style="text-align: right;">
-              <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
-            </div>
-            <div class="col-lg-1 col-md-1">
-              <a class="link" href="about.html" style="text-align: center;"><span class="nav_link">About</span></a>
-            </div>
-            <div class="col-lg-1 col-md-1">
-              <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
-            </div>
+           
+
+
+
             
 
 
@@ -570,7 +596,7 @@
           <div class="project-intro-text-div">
             <p class="project-intro-text">
                 As many as 39 crimes against women are reported every hour in India. Can we trace its roots in the social norms of Indian society? Is education a powerful enough weapon to bring about a change in these norms?
-               <br><br>This project was done as a part of “Systems Approach to Design" course under <a class="project-link" href="https://www.behance.net/kanthedabhd15e">Prof. Pratul Kalita</a> during January-April 2018.
+               <br><br>This project was done as a part of “Systems Approach to Design" course under <a class="project-link" href="">Prof. Pratul Kalita</a> during January-April 2018.
 
             </p>
           </div>
@@ -1546,7 +1572,14 @@
 
     <!--Back-->
     <div class="project-1-back">
-      <a href="index.html" class="project-link" style="font-size: 1.0em; vertical-align: middle; color: rgba(239,83,80,0.75);"><i class="material-icons arrow-right" style="font-size: 1.0em">keyboard_backspace</i>Back to portfolio</a>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12" style="text-align: center">
+            <p style="color: #EF5350"><a class="project-link" href="placement-haptipedia.html" target="_blank">Project 1</a>  |  <a class="project-link" href="placement-sex-ed.html" style="text-decoration: underline;" target="_blank">Project 2</a> | <a class="project-link" href="placement-right-time.html" target="_blank">Project 3</a> | <a class="project-link" href="placement-gestures.html" target="_blank">Project 4</a></p>
+          </div>
+        </div>
+      </div>
+      <!--a href="index.html" class="project-link" style="font-size: 1.0em; vertical-align: middle; color: rgba(239,83,80,0.75);"><i class="material-icons arrow-right" style="font-size: 1.0em">keyboard_backspace</i>Back to portfolio</a-->
     </div>
 
 
