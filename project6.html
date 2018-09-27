@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106824714-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106824714-1');
+    </script>
+
+    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Haptipedia</title>
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main_screen_settings.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
+    <link href="css/slider-1.css" rel="stylesheet">
+    <link href="css/slider-2.css" rel="stylesheet">
+    <link href="css/slider-3.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+
+    <!-- For TImeline -->
+
+    <link rel="stylesheet" href="css/timeline/reset.css"> <!-- CSS reset -->
+  <link rel="stylesheet" href="css/timeline/style.css"> <!-- Resource style -->
+  <link rel="stylesheet" href="css/timeline/demo.css"> <!-- Demo style -->
+
+  
+
+    
+  
+    <!--Google Webfont-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+   
+
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- D3.js -->  
+    
+    
+    <script src="js/d3.layout.chord.sort.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+
+    <style>
+
+    /* D3 */
+
+    
+
+    /* Another option */
+
+    
+
+    @font-face {
+      font-family: "Bebas Neue";
+      src: url(fonts/BebasNeue-webfont.woff) format('woff');
+
+      }
+
+      @font-face {
+        font-family: "CallunaLghtRegular";
+        src: url(fonts/Calluna-Regular.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: "Calluna Italic";
+        src: url(fonts/Calluna-It-webfont.woff) format('woff');
+      }
+
+    body {
+
+        background-color: #e9edef;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        font-size: 24px;
+        color: #252B33;
+    }
+
+
+    /* Provisional Min-width: 768px */
+
+
+
+    .project-heading-type-2{
+      font: 200 2.4rem/2.8rem "Bebas Neue", sans-serif;
+      margin-top: 3.2%;
+      margin-bottom: 2%;
+    }
+
+    .project-content {
+      font: 200 2.0rem/2.8rem "CallunaLghtRegular", sans-serif;
+    }
+
+    .project-heading-type-3 {
+      font: 200 3.2rem/0rem "Bebas Neue", sans-serif;
+      margin-top: 5.76%;
+      
+
+    }
+
+    .project-heading-type-5{
+
+      font: 200 2.0rem/2.8rem "Bebas Neue", sans-serif;
+      margin-top: 3.2%;
+      margin-bottom: 2%;
+
+    }
+
+    .project-2-features-right{
+    	margin-top: 6%; 
+    	background-image: url('images/project-2-feature-right.png');
+    	background-position-x: 50%;
+	    background-position-y: 70%;
+	    background-repeat: no-repeat;
+	    background-size: 1240px 520px;
+	    
+
+	}
+
+	.project-2-features-left{
+    	margin-top: 6%; 
+    	background-image: url('images/project-2-feature-left.png');
+    	background-position-x: 50%;
+	    background-position-y: 70%;
+	    background-repeat: no-repeat;
+	    background-size: 1240px 520px;
+	    
+
+	}
+
+    /* Minimum width- 1100px */
+
+    .project-margin-adjust {
+        padding: 0% 0% 0% 0%;
+    }
+
+    .project-main-heads-white{
+      padding-top: 2%;
+      padding-bottom: 4%;
+    }
+
+    .project-main-heads-grey{
+      padding-top: 2%;
+      padding-bottom: 4%;
+    }
+
+    .pre-slider-image-row{
+      margin-top: 4%;
+    }
+
+    .pre-slider-image-container {
+      position: relative;
+      
+    }
+
+    .pre-slider-images {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .competition-margin-adjust{
+    	margin: 8% 0 6% 0;
+    }
+
+    .pre-slider-image-overlay {
+      position: absolute;
+      top: 2%;
+      bottom: 90%;
+      left: 2%;
+      right: 90%;
+      height: 32px;
+      width: 32px;
+      opacity: 0.75;
+      border-radius: 30%;
+      /*transition: .5s ease*/;
+      background-color: #000000;
+    }
+
+    .pre-slider-image-container:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .no-slider-image{
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border: 1px solid black;
+    }
+
+    .fs {
+      color: white;
+      font-size: 3.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 50; /* Sit on top */
+        padding-top: 5%; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        filter: drop-shadow(8px 8px 10px gray);
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close-btn {
+        margin-left: 96%;
+    	margin-top: -20%;
+    	font-size: 48px;
+    	color: white;
+    }
+
+    .close-btn:hover{
+    	cursor: pointer;
+    }
+
+    
+
+    .modal-header {
+        padding: 16px 16px;
+        font-size: 24px;
+        color: #212121;
+        display: none;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .1);
+    }
+
+    .modal-header h2{
+      font-size: 24px;
+      font-weight: 600;
+      
+    }
+
+    .modal-body {padding: 2px 0px; background-color: #000000}
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+        display: none;
+    }
+
+    
+    .carousel-inner > .item > img {
+      width:auto; 
+      display: block;
+      margin:auto;
+      min-height: 550px;
+      max-height: 600px;
+    
+    }
+
+
+    .carousel-control{
+      opacity: 0.5;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      
+      background-image: none;
+    }
+
+    .carousel-control.right:hover{
+      opacity: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      background-image: none;
+     
+    }
+
+    .carousel-control.left:hover{
+      opacity: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      background-image: none;
+     
+    }
+
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+      width: 40px;
+      height: 40px;
+      margin-top: -10px;
+      font-size: 40px;
+    }
+
+    .carousel-indicators .active{
+      width: 16px;
+      height: 16px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      margin: 5px;
+    
+
+    }
+
+    .carousel-indicators li{
+      width: 16px;
+      height: 16px;
+      margin: 5px;
+      border: 1px solid rgba(189, 189, 189,0.75);
+      background-color: rgba(189, 189, 189,0.75);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      
+
+    }
+
+    .pre-slider-image-container{
+      border: 1px solid black;
+    }
+
+    /* min-width 992px */
+
+    .project-insight-width{
+      width: 50%;
+    }
+
+
+
+    /* All sizes */
+    .project-highlights-stats-number {
+      font: 200 3.2rem/4.0rem "Calluna Italic", serif;
+    }
+
+    .project-highlights-stats {
+      font: 200 2.0rem/2.8rem "Calluna Italic", serif;
+    }
+
+
+    
+
+   
+
+
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+
+      <!--Mobile + Desktop-->
+        <div class="mobile container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
+                </div>
+                </div>
+
+
+
+            <div class="row" style="margin-bottom: 1.5rem">
+
+              <div class="col-xs-4" style="text-align: right;">
+                <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
+              </div>
+
+              <div class="col-xs-4" style="text-align: center;">
+                <a class="link" href="about.html"><span class="nav_link">About</span></a>
+              </div>
+
+              <div class="col-xs-4">
+                <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
+              </div>
+              
+
+
+            </div>
+        </div>
+        <!--End of Mobile + below 1000px-->
+
+        <!-- /.container -->
+
+        <!--Start of Navbar for Desktop Version-->
+
+        <div class="desktop container-fluid desktop_navbar">
+          <div class="row">
+
+            <!--div class="col-lg-1"></div-->
+
+            <div class="col-lg-2 col-md-1">
+              <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
+            </div>
+
+            <div class="col-lg-6 col-md-7">
+            <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
+            </div>
+
+
+            <div class="col-lg-2 col-md-2" style="text-align: right;">
+              <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+              <a class="link" href="about.html" style="text-align: center;"><span class="nav_link">About</span></a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+              <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
+            </div>
+            
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <!--End of Navbar Desktop-->
+    </nav>
+
+    <!--End of Navigation-->
+
+
+    <!--Project 2-->
+
+
+    <!--Project Intro-->
+
+      <div class="project-intro" style="padding-top: 4%">
+
+          <img src="images/Project-4/chiLogo.png" style="display: block; margin: auto; width: 35%">
+          <p class="project-1-photo-description" style="color: #ef5350; margin-bottom: 1%; margin-top: 3%">"ACM CHI 2019 Submission"</p>
+
+          <h1 class="project-title">
+                Making Haptics Accessible
+
+          </h1>
+
+          <div class="project-intro-text-div">
+            <p class="project-intro-text">
+                Decades of haptic device invention is buried in literature- effectively lost to device engineers and experience designers. How might we then make haptic devices easily accessible to the community?
+               <br><br>This project was done between May-July 2018, under the guidance of <a href="http://www.cs.ubc.ca/~maclean/" class="project-link">Prof. Karon Maclean</a>, Director, <a href="http://www.cs.ubc.ca/labs/spin/" class="project-link">SPIN Lab</a>, the University of British Columbia, Canada and <a href="https://www.cs.ubc.ca/~seifi/" class="project-link">Dr. Hasti Seifi</a>, Postdoc Researcher, <a href="https://hi.is.mpg.de/" class="project-link">HI Department </a>, Max Plack Institute for Intelligent Systems, Germany.
+
+
+            </p>
+          </div>
+
+
+      </div>
+
+      <div class=""><img class="intro-image" src="images/Project-4/intro.jpg"></div>
+
+    <!--My Role-->
+
+        <div class="project-main-heads-white">
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-xs-12 project-margin-adjust">
+
+                  <h3 class="project-heading-type-5">
+                    Project Overview
+                  </h3>
+
+                  <h2 class="project-heading-type-3" style="margin-top: 0">
+                    "Hi Karon, Nice to meet you!"
+                  </h2>
+
+                  <p class="project-content">
+                    Haptipedia is an open source haptic device visualization library that improves accessibility to haptic devices for engineers and designers. It supports exploration, ideation and fabrication of haptic devices using interactive data visualizations. 
+                    <br><br>
+                    My role was to <span class="project-highlight-1">research device attributes</span> and <span class="project-highlight-1">design</span> and <span class="project-highlight-1">prototype data-driven interfaces that can best support hapticians achieve their goals</span>. I collaborated with  <a href="https://www.linkedin.com/in/jessica-ip/" class="project-link">Jessica Ip</a> during my entire project under the close supervision of  <a href="https://www.cs.ubc.ca/~seifi/" class="project-link">Dr. Hasti Seifi</a> and other researchers from the University of British Columbia, Canada and Max Planck Institute for Intelligent Systems, Germany.
+
+
+                  </p>
+
+                  <h2 class="project-heading-type-3" style="margin-top: 8%; text-align: center">
+                    Team Haptipedia
+                  </h2>
+
+                  <img src="images/Project-4/team-2.jpg" style="display: block; margin: auto; width:100%">
+
+                  <!--h3 class="project-heading-type-2">
+                  Tools used
+                  </h3>
+
+                  <div class=""><img class="rest-images" style="width: 50%; margin: unset; margin-top: 5%;" src="images/project-2-tools.png"></div-->
+                
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+    <!--Process-->
+
+      <div class="project-main-heads-grey">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h2 class="project-heading-type-3">
+                    Interative design process
+                </h2>
+                
+                <img class="process-image" src="images/Project-4/process.jpg" style="width: 100%; margin-top: 2%">
+
+                <!-- [Fig showing design process- 1. User Study 2. Prototyping 3. Analysis 4. Vis Design] -->
+                
+              </div>
+            </div>
+          </div>
+
+          
+
+      </div>
+
+<!-- The Modal -->
+            <div id="myModal" class="modal">
+              <i class="material-icons close-btn">
+                  close
+                </i>
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  
+                  <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+
+                  <!-- Carousel -->
+                  <div id="productCarousel" class="carousel slide" data-ride="carousel" style="">
+                    <ol class="carousel-indicators">
+                      
+                    </ol>
+                    <div class="carousel-inner" style="">
+                      
+                    </div>
+                    <a class="left carousel-control" href="#productCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#productCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                  <h3>Modal Footer</h3>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- End of Modal -->
+
+
+  <!--User Study-->
+
+  <div class="project-main-heads-white">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h6 class="project-heading-type-5">
+                    User Study
+                </h6>
+
+                 <!--Hasti what are we searching for-->
+
+                <h3 class="project-heading-type-3">
+                    “Hasti, what are we looking for?”
+                </h3>
+
+                <p class="project-content">
+                 The project started with us getting familiarized with the field of haptics and understanding the research question. The research question posed to us was- 
+                </p>
+
+
+                <p class="project-content project-highlights-stats">
+                  “What device attributes and visual interfaces can best support hapticians in choosing a haptic device/platform for their intended applications?” 
+                </p>
+                <br>
+                <p class="project-content">
+                  We figured it out early in the process that the device attributes we were looking for were the initial project requirements of hapticians. These requirements might be in the form of technical constraints or end user needs. <span class="project-highlight-1">To discover these requirements, we needed to understand the design process of hapticians. </span>  This formed the basis of our study methodology.              
+                </p>
+
+
+
+
+
+
+          </div></div></div>
+
+          
+
+            <!--“Interview prep won’t even take a week!”-->
+
+                <div class="container">
+                  <div class="row" style="margin-bottom: 5%">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                	  
+                	  	  <h3 class="project-heading-type-3">
+	                         “Interview prep won’t even take a week!”
+	                      </h3>
+	                      <p class="project-content">
+	                       We structured the interview to encourage storytelling among participants. It was divided into three parts-
+
+	                     </p>
+
+                       <ol class="project-content objective-list">
+                        <li><span class="project-highlight-1">Background of the participant</span></li>
+                        <li><span class="project-highlight-1">Story of a previous project</span></li>
+                        <li><span class="project-highlight-1">Protocol Analysis with prototype</span></li>
+                      </ol>
+
+                       <p class="project-content">Framing the questions for the interview was a carefully thought out process. We had to keep away from the “design jargon” as most hapticians aren’t familiar with these terms. I had never imagined that <span class="project-highlight-1">it could take upto 2 weeks to design a good user study</span>. </p>
+
+
+
+                        
+
+                     </div>  
+                   </div>
+                 </div>
+
+     </div>
+
+  <!--End of User Study Design-->  
+
+    <div class="project-main-heads-grey">
+
+     <div class="container">
+        <div class="row">
+          <div class="col-xs-12 project-margin-adjust">
+
+            <h6 class="project-heading-type-5">
+                    Prototyping
+            </h6>
+
+             <!--Playing with Tableau-->
+
+            <h3 class="project-heading-type-3">
+                “Playing with Tableau”
+            </h3>
+
+             <p class="project-content">
+              An early Tableau prototype of Haptipedia was already in place. However,<span class="project-highlight-1"> it needed customization</span> before using it for the exploratory part of the interview. This was my initial exposure to the field of data visualization design. This also gave me a chance to<span class="project-highlight-1"> learn prototyping on Tableau</span>.
+            </p>
+
+            
+
+            
+
+      </div></div>
+
+      
+
+            <div class="row">
+              <div class="col-xs-12" style="margin-top: 4%; margin-bottom: 8%">
+
+
+                  
+                  <!-- Embed Tableau Prototype -->
+                  <a href="https://public.tableau.com/profile/ashutosh1872#!/vizhome/Haptipedia-Proto-3-1/Proto-3" target="_blank"><img src="images/Project-4/proto-1-2.png" style="width: 100%; display: block; margin: auto"></a>
+
+                  <a href="https://public.tableau.com/profile/ashutosh1872#!/vizhome/Haptipedia-Proto-3-1/Proto-3" class="project-content project-link" style="text-align: center; display: block; margin-top: 2%; text-decoration: underline;" target="_blank"> Click here to Interact with Tableau Prototype </a>
+              </div></div>
+
+            
+
+
+    </div>
+
+              
+
+    <!--Analysis-->
+
+      <div class="project-main-heads-white">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h6 class="project-heading-type-5">
+                    User Study
+                </h6>
+
+                 <!--16 seems achievable-->
+
+                <h3 class="project-heading-type-3">
+                    “16 seems achievable”
+                </h3>
+
+                <p class="project-content">
+                  Contrary to what the heading says, we<span class="project-highlight-1"> interviewed 10 participants spread across a span of 5 weeks</span>. We had interviewees with experience in both building devices and designing experiences with those devices. 
+                </p>
+
+                <h3 class="project-heading-type-3">
+                    “Jessica kick me if I go beyond an hour”
+                </h3>
+
+                <p class="project-content">
+                  We conducted interviews both in-person and remotely via video conferencing (It was challenging!). Each interview lasted for about an hour for which participants received CA$15 Amazon e-gift card as an honorarium. 
+                </p>
+
+              </div>
+            </div>
+
+            <div class="row" style="margin: 4% 0% 8% 0%;">
+              <div class="col-xs-12">
+
+                <!-- Add 2 photos from interviews -->
+                
+                  <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/interview-1-2.jpg" style="width: 100%; display:block; margin: auto">
+                   <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">A participant during exploratory activity</p></div>
+                  <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/interview-2.png" style="width: 100%; display:block; margin: auto">
+                     <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Even Hasti used to join the interviews sometimes</p>
+                  </div>
+                
+               
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12">
+
+                 <p class="project-content">
+                  After summarising their educational and work experience, the participants described one of their previous projects on the lines of <span class="project-highlight-1"> motivation, requirements and pros and cons of explored haptic devices.</span>  
+                </p>
+
+                
+
+                <p class="project-content">
+                  During the<span class="project-highlight-1"> protocol analysis</span>, the participants <span class="project-highlight-1">interacted with Haptipedia</span> prototype to complete a task scenario and <span class="project-highlight-1">verbalized their thoughts</span>. The task scenario was selecting a haptic device (for experience designers) or redesign it (for device engineers). We audio recorded them and screen recorded their interactions with the prototype.
+  
+                </p>
+
+               
+
+
+                  
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <div class="project-2-highlights-div">
+                    <p class="project-highlights-stats">“Story-telling helped us gather insights on attributes that hapticians are most interested in”</p>
+                  </div>
+                  
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                   <div class="project-2-highlights-div">
+                    <p class="project-highlights-stats">“Protocol analysis helped us find usability issues, evaluate existing attributes and work out user tasks”</p>
+                  </div>
+                  
+                </div>
+
+              </div>
+            </div>
+
+      </div>
+
+      <div class="project-main-heads-grey">
+
+          <!-- D3 Prototyping-->
+
+            <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                      <h6 class="project-heading-type-5">
+                          Prototyping
+                      </h6>
+
+                       <!--D3 protoyping-->
+
+                      <h3 class="project-heading-type-3">
+                          “Rome wasn’t built in a week but the D3 prototype was!”
+                      </h3>
+
+                      <p class="project-content">
+                        During the course of the interviews, we realised that the <span class="project-highlight-1">Tableau prototype wasn’t powerful</span> enough and yielded repeated insights. We decided to switch our prototype to “D3.js”. But the challenge was- Could it be implemented in time for the remaining interviews?
+                      </p><br>
+                      <p class="project-content">
+                        While the team hunted for a professional, we started a small side project of our own. With Jessica’s help, I was able to <span class="project-highlight-1">build a working D3 prototype in a week’s time</span>. This prototype <span class="project-highlight-1">supported features based on feedback</span> obtained from the ongoing user study.
+
+                      </p>
+                      <br>
+
+                      <a href="https://ubc-haptipedia.github.io/" class="project-content project-link" style="display: block; margin: auto; text-align: center; text-decoration: underline;" target="_blank"> Click here to Interact with D3.js Prototype </a>
+
+            </div></div></div>
+
+      
+
+       <div class="container" style="text-align: center;">
+
+
+                  
+
+                  <!-- Feature 1 -->
+
+                  <div class="row" style="">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                       <h3 class="project-heading-type-3" style="display: block; margin: auto; margin: 5% 0% 1% 0%;">
+                          Iterating on Features
+                       </h3>
+                      
+
+                      <div class="col-md-6 col-lg-6 col-sm-6">
+                        
+
+                        <div class="">
+                        <a href="https://ubc-haptipedia.github.io/" target="_blank"><img class="" src="images/Project-4/feature-1.gif" style="width: 92%; box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.4); margin: 10% 0% 4% 0%"></a>
+                        </div>
+
+                        <p class="project-highlights-stats" style="">
+                          "Filter across visualizations using select attributes"
+                        </p>
+
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-lg-6">
+                        
+
+                        <div class="">
+                        <a href="https://ubc-haptipedia.github.io/" target="_blank"><img class="" src="images/Project-4/feature-3.gif" style="width: 92%; box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.4); margin: 50% 0% 4% 0%"></a>
+                        </div>
+
+                        <p class="project-highlights-stats" style="">
+                          "Establish first impression of the device using images"
+                        </p>
+                        
+                      </div>
+
+                      
+                      
+
+                      </div>
+                  </div>
+
+                  <!-- Feature 2 -->
+
+                  <div class="row">
+                    <div class="col-xs-12 project-margin-adjust">
+
+
+                      <!--div class="col-md-3 col-sm-3 col-lg-3"></div-->
+
+                      <div class="col-md-6 col-lg-6 col-sm-6" style="margin-bottom: 6%">
+                        
+
+                        <div class="">
+                        <a href="https://ubc-haptipedia.github.io/" target="_blank"><img class="" src="images/Project-4/feature-2.gif" style="width: 92%; box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.4); margin: -25% 0% 4% 0%"></a>
+                        </div>
+
+                        <p class="project-highlights-stats" style="">
+                          "Mark devices of interest using bookmark feature"
+                        </p>
+
+                      </div>
+
+
+                      <div class="col-md-6 col-sm-6 col-lg-6"></div>
+                      
+
+                      </div>
+                  </div>
+
+                  
+
+                 
+
+
+
+
+
+        </div>
+
+        
+
+
+    </div>
+
+            <!-- Analysis -->
+      <div class="project-main-heads-white">
+
+            <div class="container">
+                  <div class="row">
+                    <div class="col-xs-12 project-margin-adjust">
+
+                      <!--Open Coding-->
+
+                      <h6 class="project-heading-type-5">
+                          Analysis
+                      </h6>
+
+                      <h3 class="project-heading-type-3">
+                          “Coding data was more difficult than I had thought”
+                      </h3>
+
+                      <p class="project-content">
+                        After the tedious task of transcribing the interviews, we used a thematic analysis influenced by grounded theory to analyze the data.
+                      </p>
+                      <br>
+                      <p class="project-content">
+                        Guided by our research question, we, along with Hasti, set out to code the data using MAXQDA software separately. We used a <span class="project-highlight-1">hybrid of pre-set codes and open codes</span>. We used <span class="project-highlight-1">memo writing and axial coding</span> to connect the codes. After numerous discussions, we developed the initial themes around<span class="project-highlight-1"> recurring device attributes, user wants/tasks and user behaviour.</span>                      
+                      </p>
+                      
+                      <!--div class="project-2-highlights-div">
+                        <p class="project-highlights-stats">“Learning to properly code the data was challenging and it took me 3 attempts to get it right”</p>
+                      </div-->
+
+
+                      
+
+            </div></div>
+
+            <div class="row" style="margin: 4% 0% 8% 0%;">
+              <div class="col-xs-12">
+
+                <!-- Add 2 photos from interviews -->
+                
+                  <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/coding-1-2.jpg" style="width: 100%; display:block; margin: auto">
+                    <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Early morning PDT (late evening CEST) brainstorming session</p></div>
+                  <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/coding-2.png" style="width: 100%; display:block; margin: auto">
+                    <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">MAXQDA, an awesome Qualitative Analysis software</p></div>
+                
+               
+
+              </div>
+            </div>
+          </div>
+
+
+            <!-- Usage Scenario Slider -->
+
+             <div class="container">
+              <div class="row">
+                <div class="col-xs-12 project-margin-adjust">
+                  <h3 class="project-heading-type-3">
+                          “Refining usage scenarios”
+                  </h3>
+                  <p class="project-content">
+                      Based on identified user behaviour and role, we refined the usage scenarios-
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-6" style="margin: 4% 0% 6% 0%">
+                <img class="no-slider-image" src="images/Project-4/persona-1.jpg" style="width: 90%; display:block; margin: auto;">
+                   
+              </div>
+
+              <div class="col-lg-6 col-md-6 col-sm-6" style="margin: 4% 0% 6% 0%">
+                <img class="no-slider-image" src="images/Project-4/persona-2.jpg" style="width: 90%; display:block; margin: auto;">
+              </div>
+              
+              
+            </div>   
+
+                
+            <!--End of Slider for Usage Scenarios-->
+
+
+
+
+
+        <!--End of Analysis-->
+
+
+      </div>
+
+    
+    <!--Design-->
+
+        
+
+    <!--Vis Design-->
+
+    <div class="project-main-heads-grey">
+
+            <div class="container" style="">
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 5%">
+
+                      <p class="project-highlights-stats">*The actual results- identified attributes, behaviour and tasks can’t be discussed before the actual publication. But I’ll talk about the impact of these research insights on our design.</p>
+
+                      <h6 class="project-heading-type-5">
+                          Design
+                      </h6>
+
+                      <h3 class="project-heading-type-3">
+                          “Learning to design data visualizations”
+                      </h3>
+
+                      <p class="project-content">
+                        This stage was particularly interesting for me as we collaborated with another researcher at UBC- <a class="project-link" href="http://michaeloppermann.com/">Michael Oppermann</a>, who has significant experience in vis design. Together with Michael, we learnt how to implement the “What-Why-How” vis design framework proposed by<a href="http://www.cs.ubc.ca/~tmm/vadbook/" class="project-link"> Prof. Tamara Munzner</a>.
+
+                      </p>
+                    </div></div>
+                    <div class="row" style="margin: 4% 0% 0% 0%;">
+                      <div class="col-xs-12">
+
+                        <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/design-1-2.jpg" style="width: 100%; display:block; margin: auto">
+                         <p class="project-1-photo-description" style="margin: 3% 0% 3% 0%">Michael teaching us the ways of a vis designer</p></div>
+                        <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/design-2-2.jpg" style="width: 100%; display:block; margin: auto">
+                           <p class="project-1-photo-description" style="margin: 3% 0% 3% 0%">Jessica and I having a hard time implementing the framework</p>
+                        </div>
+
+                     </div></div>
+            </div>
+
+                      
+                    
+
+             <div class="container" style="">
+                  <div class="row">
+                    <div class="col-xs-12" style="margin-top: 5%">
+
+                    <h3 class="project-heading-type-3">
+                          “Why- Task Abstraction”
+                    </h3>
+
+                    <p class="project-content">
+                      The most important part of this framework is to consider user wants/tasks obtained from user research in an abstract form. We called them “visualization tasks”. These tasks were fundamental in concisely identifying the underlying user goals which guided our design of vis and other elements in the interface.
+
+                    </p>
+
+                    <!-- Fig showing example of task abstraction- Eg. Browse all devices -->
+
+                  </div></div>
+
+                  <div class="row" style="margin: 4% 0% 0% 0%;">
+                      <div class="col-xs-12">
+
+                        
+                        <div class="col-lg-12 col-md-12 col-sm-12"><img class="" src="images/Project-4/task-abstraction.png" style="width: 50%; display:block; margin: auto">
+                           <p class="project-1-photo-description" style="margin: 3% 0% 3% 0%">An example showing narrowing down from user wants to abstract tasks</p>
+                        </div>
+
+                     </div></div>
+
+             </div>
+
+             <div class="container" style="">
+                  <div class="row"  style="margin-top: 3%; margin-bottom: 3%">
+                    <div class="col-xs-12">
+
+
+
+                    <h3 class="project-heading-type-3">
+                          “Which attributes go in the vis, which ones in the filters”
+                    </h3>
+
+                    <p class="project-content">
+                      While we brainstormed on the tasks, we also prioritized all the device attributes on the basis of their frequency of recurrence. This sorting of attributes along with the tasks guided the design of hierarchical filters, visualisations and other interface elements. 
+
+                    </p>
+
+                    
+
+
+            </div></div></div>
+
+    </div>
+
+    <div class="project-main-heads-white">
+
+
+            <!-- Implementing Wireframes -->
+
+
+            <div class="container" style="text-align: center">
+              <div class="row project-margin-adjust" style="margin-top: 5%; margin-bottom: 5%">
+                <div class="col-xs-12">
+
+                  <h3 class="project-heading-type-3"> 
+                             “Implementing the What-why-how framework”
+                  </h3>
+
+                  <p class="project-content" style="text-align: center">
+                          Shown below is an example visualization from Haptipedia designed using the "What-Why-How" framework. This framework highly simplifies the vis design process and efficiently incorporates all user needs. 
+                  </p>
+             
+
+              </div></div>
+
+            </div> 
+
+            <img src="images/Project-4/vis-example.jpg" style="width: 100%">
+
+            <div class="container">
+              <div class="row project-margin-adjust">
+                <div class="col-xs-12">
+                  <h3 class="project-heading-type-3" style="margin-top: 10%; margin-bottom: 5%; text-align: center"> 
+                               “Iteratively brainstorming on Haptipedia"
+                  </h3>
+                  <p class="project-content" style="text-align: center">
+                          Every element on the interface has undergone numerous discussions. We brainstormed using "sketching" on numerous visual interfaces. I have converted one of those sketches into a high-fidelity version. 
+                  </p>
+                  <br>
+                  <a href="http://haptipedia.org/x/?t=publications" class="project-content project-link" style="display: block; margin: auto; text-align: center; text-decoration: underline;" target="_blank"> CLICK HERE TO INTERACT WITH FINAL HAPTIPEDIA VERSION </a>
+
+                </div>
+
+              </div>
+
+            </div>
+
+              <img src="images/Project-4/wireframes.jpg" style="width: 100%">
+
+            
+
+
+
+
+
+    </div>
+
+    <!-- End of Design -->
+
+
+        
+
+  <!--Learning Recap-->
+
+        <div class="project-main-heads-grey">
+
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 project-margin-adjust">
+
+                  <h2 class="project-heading-type-2">
+                      Learnings Recap
+                  </h2>
+
+                    <p class="project-content" style="margin-bottom: 3%">
+                      This project offered me a <span class="project-highlight-1">good exposure to international research</span> in the field of HCI under two amazing mentors. I could not have utilised my summer in a more productive manner. I learnt how to<span class="project-highlight-1"> work and communicate in a cross-cultural team</span>. I also learnt how to <span class="project-highlight-1">conduct a well-structured user study</span> and analyse data using the <span class="project-highlight-1">grounded theory method</span>. This project also got me interested into the field of <span class="project-highlight-1">data visualization design</span> which I would love to explore further. 
+                      <br><br>
+                      Karon made sure that I get enough opportunities to interact closely with HCI researchers from academia and industry like U of Washington, U of Tokyo, Microsoft, Apple and Samsung. I look forward to future collaborations with my mentors and exposure to international research. P.S. The awesome hikes, food and culture made me fall in love with Vancouver.
+
+
+
+                    </p>
+
+                  </div></div>
+
+                  <div class="row">
+                    
+                      <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/karon-kids-1-2.jpg" style="width: 100%; display:block; margin: auto">
+                         <p class="project-1-photo-description" style="margin: 3% 0% 3% 0%">Undegrads posing with Karon</p></div>
+                  
+
+                    
+                      <div class="col-lg-6 col-md-6 col-sm-6"><img class="no-slider-image" src="images/Project-4/hasti-kids-1-2.jpg" style="width: 100%; display:block; margin: auto">
+                         <p class="project-1-photo-description" style="margin: 3% 0% 3% 0%">The one-stop solution for all problems- Hasti</p>
+                       </div>
+                   
+
+                    
+
+            </div>
+
+            
+
+          </div>
+
+            
+
+        </div>
+
+        <img class="no-slider-image" src="images/Project-4/vancouver.jpg" style="width: 100%; display:block; margin: auto">
+
+
+
+
+
+      
+
+
+
+    <!--End of Project 2-->
+
+    <!--Back-->
+    <div class="project-1-back">
+      <a href="index.html" class="project-link" style="font-size: 1.0em; vertical-align: middle; color: rgba(239,83,80,0.75);"><i class="material-icons arrow-right" style="font-size: 1.0em">keyboard_backspace</i>Back to portfolio</a>
+    </div>
+
+
+    
+
+
+<!--Footer-->
+
+<div class="container-fluid footer">
+
+  <div class="row">
+
+    <div class="col-md-1 col-lg-1"></div>
+
+    <div class="col-md-5 col-lg-5">
+
+          <div class="row contact_info">
+                <div class="col-xs-12">
+                  <ul class="contact_info_ul">
+                    <li class="contact_info_li"><a style="padding-left: 0px;" href="mailto:ashutoshagrawaldesign@gmail.com" target="_top">ashutoshagrawaldesign@gmail.com</a></li>
+                    <span style="font-size: 2.4rem; vertical-align: middle;">&middot;</span>
+                    <li class="contact_info_li"><a href="https://www.linkedin.com/in/agrawal30/">LinkedIn</a></li>
+                    <span style="font-size: 2.4rem; vertical-align: middle;">&middot;</span>
+                    <li class="contact_info_li"><a href="https://www.facebook.com/ashutosh3028" style="border: 0px solid white">Facebook</a></li>
+
+                  </ul>
+                </div>
+
+          </div>
+
+    </div>
+
+    <div class="col-md-5 col-lg-5">
+
+              <div class="row copyright">
+                <div class="col-xs-12">
+                  <p class="copyright_info copy1">Website Designed and Developed by <a style="text-decoration: none; color: black" href="">Ashutosh Agrawal</a></p>
+                  <p class="copyright_info copy2">&copy;2017 Ashutosh Agrawal</p>
+                </div>
+              </div>
+
+  </div>
+
+  <div class="col-md-1 col-lg-1"></div>
+
+  </div>
+
+
+
+</div>
+
+<!--End of Footer-->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <!-- Custom JS-->
+    <script src="js/modal.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+    
+    <script src="js/slider.js"></script>
+    <script src="js/slider-1.js"></script>
+    <script src="js/slider-2.js"></script>
+    <script src="js/slider-3.js"></script>
+    <!--script src="js/persona-slider.js"></script-->
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
+    <!-- Bootstrap Core JavaScript -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- d3 js -->
+    <script src="js/script.js"></script>
+    <script src="js/subsystem.js"></script>
+
+    <script src="js/bootstrap.tooltip.js"></script>
+    <script src="js/bootstrap.popover.js"></script>
+
+
+
+
+    </body>
+    </html>
