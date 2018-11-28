@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106824714-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106824714-1');
+    </script>
+
+    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>D.E. Shaw Task</title>
+
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <!-- Custom CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/main_screen_settings.css" rel="stylesheet">
+    <link href="css/about.css" rel="stylesheet">
+    <link href="css/slider.css" rel="stylesheet">
+    <link href="css/slider-1.css" rel="stylesheet">
+    <link href="css/slider-2.css" rel="stylesheet">
+    <link href="css/slider-3.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+
+  
+
+    
+  
+    <!--Google Webfont-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+   
+
+    <!--Google Icons-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <!-- D3.js -->  
+    
+    
+    <script src="js/d3.layout.chord.sort.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+
+
+
+    <style>
+
+    /* D3 */
+
+    
+
+    /* Another option */
+
+    .title {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        font-size:14px;
+        font-family: 'Oswald', sans-serif;
+        color: #2B2B2B;
+      }
+      
+      .texts {
+        margin-left: 20px;
+        margin-right: 20px;
+        line-height: 140%;
+      }
+      
+      .credit {
+        color: #9E9E9E;
+        font-size: 14px;
+        margin-bottom: 0.5em;
+      }
+      
+      .notes {
+        color: #9E9E9E;
+        font-size: 10px;
+      }
+      
+      .popover {
+        pointer-events: none;
+      }
+      
+      #chart{
+        font-size: 14px;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        fill: #2B2B2B;
+      }
+      
+      @media (min-width: 600px) {
+        #chart{
+          font-size: 14px;
+        }
+      }
+
+
+    /* Subsystem */
+
+    .node {
+      cursor: pointer;
+    }
+
+    .node:hover {
+      stroke: #212121;
+      stroke-width: 2px;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.9);
+    }
+
+    .node--leaf {
+      fill: #ef9a9a;
+     color: white;
+      font-size: 5px;
+    }
+
+    .label {
+      font: 16px Roboto, Arial, sans-serif;
+      color: white;
+      text-anchor: middle;
+      
+    }
+
+    .label,
+    .node--root,
+    .node--leaf {
+
+      pointer-events: none;
+    }
+
+  
+    /* End of d3 */
+
+    @font-face {
+      font-family: "Bebas Neue";
+      src: url(fonts/BebasNeue-webfont.woff) format('woff');
+
+      }
+
+      @font-face {
+        font-family: "CallunaLghtRegular";
+        src: url(fonts/Calluna-Regular.woff) format('woff');
+      }
+
+      @font-face {
+        font-family: "Calluna Italic";
+        src: url(fonts/Calluna-It-webfont.woff) format('woff');
+      }
+
+    body {
+
+        background-color: #e9edef;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        font-size: 24px;
+        color: #252B33;
+    }
+
+
+    /* Provisional Min-width: 768px */
+
+    .placement-project{
+      border: 1px solid black;
+      border-radius: 4px;
+
+    }
+
+    .placement-project:hover{
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+      border-radius: 4px;
+
+    }
+
+    .placement-project-active{
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+       border: 1px solid black;
+       border-radius: 4px;
+      
+    }
+
+
+
+    .project-heading-type-2{
+      font: 200 2.4rem/2.8rem "Bebas Neue", sans-serif;
+      margin-top: 3.2%;
+      margin-bottom: 2%;
+    }
+
+    .project-content {
+      font: 200 2.0rem/2.8rem "CallunaLghtRegular", sans-serif;
+    }
+
+    .project-heading-type-3 {
+      font: 200 3.2rem/0rem "Bebas Neue", sans-serif;
+      margin-top: 5.76%;
+      
+
+    }
+
+    .project-heading-type-5{
+
+      font: 200 2.0rem/2.8rem "Bebas Neue", sans-serif;
+      margin-top: 3.2%;
+      margin-bottom: 2%;
+
+    }
+
+    .project-2-features-right{
+    	margin-top: 6%; 
+    	background-image: url('images/project-2-feature-right.png');
+    	background-position-x: 50%;
+	    background-position-y: 70%;
+	    background-repeat: no-repeat;
+	    background-size: 1240px 520px;
+	    
+
+	}
+
+	.project-2-features-left{
+    	margin-top: 6%; 
+    	background-image: url('images/project-2-feature-left.png');
+    	background-position-x: 50%;
+	    background-position-y: 70%;
+	    background-repeat: no-repeat;
+	    background-size: 1240px 520px;
+	    
+
+	}
+
+    /* Minimum width- 1100px */
+
+    .project-margin-adjust {
+        padding: 0% 0% 0% 0%;
+    }
+
+    .project-main-heads-white{
+      padding-top: 2%;
+      padding-bottom: 4%;
+    }
+
+    .project-main-heads-grey{
+      padding-top: 2%;
+      padding-bottom: 4%;
+    }
+
+    .pre-slider-image-row{
+      margin-top: 4%;
+    }
+
+    .pre-slider-image-container {
+      position: relative;
+      
+
+    }
+
+     .no-slider-image{
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      border: 1px solid black;
+    }
+
+    .pre-slider-images {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .competition-margin-adjust{
+    	margin: 8% 0 6% 0;
+    }
+
+    .pre-slider-image-overlay {
+      position: absolute;
+      top: 2%;
+      bottom: 90%;
+      left: 2%;
+      right: 90%;
+      height: 32px;
+      width: 32px;
+      opacity: 0.75;
+      border-radius: 30%;
+      /*transition: .5s ease*/;
+      background-color: #000000;
+    }
+
+    .pre-slider-image-container:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      cursor: pointer;
+    }
+
+    .fs {
+      color: white;
+      font-size: 3.2rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 50; /* Sit on top */
+        padding-top: 5%; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        filter: drop-shadow(8px 8px 10px gray);
+    }
+
+    /* Modal Content */
+    .modal-content {
+        position: relative;
+        margin: auto;
+        padding: 0;
+        width: 90%;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close-btn {
+        margin-left: 96%;
+    	margin-top: -20%;
+    	font-size: 48px;
+    	color: white;
+    }
+
+    .close-btn:hover{
+    	cursor: pointer;
+    }
+
+    
+
+    .modal-header {
+        padding: 16px 16px;
+        font-size: 24px;
+        color: #212121;
+        display: none;
+        background-color: white;
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 255, .1);
+    }
+
+    .modal-header h2{
+      font-size: 24px;
+      font-weight: 600;
+      
+    }
+
+    .modal-body {padding: 2px 0px; background-color: #000000}
+
+    .modal-footer {
+        padding: 2px 16px;
+        background-color: #5cb85c;
+        color: white;
+        display: none;
+    }
+
+    
+    .carousel-inner > .item > img {
+      width:auto; 
+      display: block;
+      margin:auto;
+      min-height: 550px;
+      max-height: 600px;
+    
+    }
+
+
+    .carousel-control{
+      opacity: 0.5;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      
+      background-image: none;
+    }
+
+    .carousel-control.right:hover{
+      opacity: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      background-image: none;
+     
+    }
+
+    .carousel-control.left:hover{
+      opacity: 1;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      background-image: none;
+     
+    }
+
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+      width: 40px;
+      height: 40px;
+      margin-top: -10px;
+      font-size: 40px;
+    }
+
+    .carousel-indicators .active{
+      width: 16px;
+      height: 16px;
+      text-shadow: 2px 2px 5px rgba(0,0,0,1);
+      border: 1px solid #ffffff;
+      background-color: #ffffff;
+      margin: 5px;
+    
+
+    }
+
+    .carousel-indicators li{
+      width: 16px;
+      height: 16px;
+      margin: 5px;
+      border: 1px solid rgba(189, 189, 189,0.75);
+      background-color: rgba(189, 189, 189,0.75);
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+      
+
+    }
+
+    .pre-slider-image-container{
+      border: 1px solid black;
+    }
+
+    /* min-width 992px */
+
+    .project-insight-width{
+      width: 50%;
+    }
+
+
+
+    /* All sizes */
+    .project-highlights-stats-number {
+      font: 200 3.2rem/4.0rem "Calluna Italic", serif;
+    }
+
+    .project-highlights-stats {
+      font: 200 2.0rem/2.8rem "Calluna Italic", serif;
+    }
+
+
+    
+
+   
+
+
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+   <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+
+      <!--Mobile + Desktop-->
+        <div class="mobile container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="row">
+              <div class="col-xs-12">
+                <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12">
+                <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
+                </div>
+                </div>
+
+
+
+            <div class="row" style="margin-bottom: 1.5rem">
+
+              <div class="col-xs-4" style="text-align: right;">
+                <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
+              </div>
+
+              <div class="col-xs-4" style="text-align: center;">
+                <a class="link" href="about.html"><span class="nav_link">About</span></a>
+              </div>
+
+              <div class="col-xs-4">
+                <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
+              </div>
+              
+
+
+            </div>
+        </div>
+        <!--End of Mobile + below 1000px-->
+
+        <!-- /.container -->
+
+        <!--Start of Navbar for Desktop Version-->
+
+        <div class="desktop container-fluid desktop_navbar">
+          <div class="row">
+
+            <!--div class="col-lg-1"></div-->
+
+            <div class="col-lg-2 col-md-1">
+              <a href="index.html"><img class="logo" src="images/BrandIdentity.png"></a>
+            </div>
+
+            <div class="col-lg-6 col-md-7">
+            <p class="intro">Hi! I'm Ashutosh, designer of simple and meaningful digital experiences.</p>
+            </div>
+
+
+            <div class="col-lg-2 col-md-2" style="text-align: right;">
+              <a class="link" href="index.html"><span class="nav_link active">Portfolio</span></a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+              <a class="link" href="about.html" style="text-align: center;"><span class="nav_link">About</span></a>
+            </div>
+            <div class="col-lg-1 col-md-1">
+              <a class="link" href="CV.pdf" target="_blank"><span class="nav_link">Resume</span></a>
+            </div>
+            
+
+
+
+
+
+            </div>
+
+        </div>
+
+        <!--End of Navbar Desktop-->
+    </nav>
+
+    <!--End of Navigation-->
+
+ 
+
+
+    <!--Project 2-->
+
+
+    <!--Project Intro-->
+
+      <div class="project-intro" style="padding-top:4%;">
+
+
+          <h1 class="project-title">
+                Empowering traders with data vis 
+
+          </h1>
+
+          <div class="project-intro-text-div">
+            <p class="project-intro-text">
+                Analyzing data and predicting the future from it can get tedious if the data is consumed in a raw tabular form. How might we then make data consumption more efficient to enable traders achieve their goals?
+               <br><br>This project was done in 2018 as a part of <a class="project-link">"D.E. Shaw India Placement Task"</a> in a duration of 24 hours.
+
+            </p>
+          </div>
+
+
+      </div>
+
+      <div class=""><img class="intro-image" src="images/ms-intro-image.jpg"></div>
+
+    <!--My Role-->
+
+        <div class="project-main-heads-white">
+
+            <div class="container">
+
+              <div class="row">
+
+                <div class="col-xs-12 project-margin-adjust">
+
+                  <h2 class="project-heading-type-3">
+                    Project Overview
+                  </h2>
+
+                  <p class="project-content">
+                    'InVis' is a <span class="project-highlight-1">data visualization interface</span> for <span class="project-highlight-1">traders</span> which enables them<span class="project-highlight-1"> consume</span>, <span class="project-highlight-1">analyze</span>, <span class="project-highlight-1">produce</span> data more effectively.  
+                  </p>
+
+                  <!--h3 class="project-heading-type-2">
+                  Tools used
+                  </h3>
+
+                  <div class=""><img class="rest-images" style="width: 50%; margin: unset; margin-top: 5%;" src="images/project-2-tools.png"></div-->
+                
+
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+    <!--Process-->
+
+      <div class="project-main-heads-white">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h2 class="project-heading-type-3">
+                    Design Process
+                </h2>
+                <p class="project-content">
+                  I followed the What-Why-How framework for Data Visualization Design proposed by data vis guru <a href="http://www.cs.ubc.ca/~tmm/vadbook/" class="project-link"> Prof. Tamara Munzner</a>.
+
+                </p>
+
+	            </div>
+	        </div>
+	    </div>
+
+	    <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+
+                <img class="process-image" src="images/de-process.jpg" style="width: 100%; margin-top: 2%">
+                
+              </div>
+            </div>
+          </div>
+
+          <!--div class="">
+          <img class="process-image" src="images/project-2-process.png" style="margin-top: 6%; width: 95%">
+          
+          </div-->
+
+      </div>
+
+<!-- The Modal -->
+            <div id="myModal" class="modal">
+              <i class="material-icons close-btn">
+                  close
+                </i>
+
+              <!-- Modal content -->
+              <div class="modal-content">
+                
+                <div class="modal-header">
+                  
+                  <h2>Modal Header</h2>
+                </div>
+                <div class="modal-body">
+
+                  <!-- Carousel -->
+                  <div id="productCarousel" class="carousel slide" data-ride="carousel" style="">
+                    <ol class="carousel-indicators">
+                      
+                    </ol>
+                    <div class="carousel-inner" style="">
+                      
+                    </div>
+                    <a class="left carousel-control" href="#productCarousel" role="button" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#productCarousel" role="button" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+
+
+                </div>
+                <div class="modal-footer">
+                  <h3>Modal Footer</h3>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- End of Modal -->
+
+
+  <!--Discovery 1-->
+
+  <div class="project-main-heads-grey">
+
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                <h6 class="project-heading-type-5">
+                    What: Data Abstraction
+                </h6>
+
+
+                <h3 class="project-heading-type-3">
+                    “Understanding the given dataset”
+                </h3>
+
+                <p class="project-content">
+                    Many aspects of vis design are driven by the kind of data at our disposal. So, I started to gather sense of the mammoth data set given to us. The framework allowed me to do exactly that quite efficiently- 
+                </p>
+
+              </div>
+            </div>
+
+            <div class="row" style="margin: 4% 0% 4% 0%;">
+              <div class="col-xs-12">
+
+                
+                
+                  <div class="col-lg-1 col-md-1 col-sm-1"></div>
+                  <div class="col-lg-10 col-md-10 col-sm-10"><img class="no-slider-image" src="images/de-what.jpg" style="width: 100%; display:block; margin: auto">
+                     <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Understanding the data-set</p>
+                  </div>
+                  <div class="col-lg-1 col-md-1 col-sm-1"></div>
+               
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-xs-12 project-margin-adjust">
+
+                
+
+                <h3 class="project-heading-type-3">
+                    “Understanding traders using context-scenario”
+                </h3>
+
+                <p class="project-content">
+                    To understand how a trader might use the given data set, I drew up a story board highlighting a context of use. This allowed me to elicit the goals of a trader.
+                </p>
+
+              </div>
+            </div>
+
+            <div class="row" style="margin: 4% 0% 4% 0%;">
+              <div class="col-xs-12">
+
+                
+                
+                  <!--div class="col-lg-1 col-md-1 col-sm-1"></div-->
+                  <div class="col-lg-12 col-md-12 col-sm-12"><img class="no-slider-image" src="images/de-scenario.jpg" style="width: 100%; display:block; margin: auto">
+                     <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">How might a trader use this dataset</p>
+                  </div>
+                  <!--div class="col-lg-1 col-md-1 col-sm-1"></div-->
+
+                  
+               
+
+              </div>
+            </div>
+
+          
+
+            
+   </div>     
+   </div>        
+
+            
+
+    <!--End of Disocvery 1-->
+
+    <!--Analysis 1-->
+
+      <div class="project-main-heads-white">
+
+          <div class="container">
+            
+                <div class="row">
+                  <div class="col-xs-12 project-margin-adjust">
+
+                    
+                    <h6 class="project-heading-type-5">
+                    Why: Task Abstraction
+                    </h6>
+
+                    <h3 class="project-heading-type-3">
+                        “Eliciting user goals as abstract tasks”
+                    </h3>
+
+                    <p class="project-content">
+                        The most important part of this framework is to consider user goals (btained from scenario above) in an abstract form. They are called “visualization tasks”. These tasks were fundamental in concisely identifying the underlying user goals which guided my design of vis and other elements in the interface.
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="row" style="margin: 4% 0% 4% 0%;">
+                  <div class="col-xs-12">
+
+                    
+                    
+                      
+                      <div class="col-lg-12 col-md-12 col-sm-12"><img class="no-slider-image" src="images/de-why.jpg" style="width: 100%; display:block; margin: auto">
+                         <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Listing down visualization tasks from user goals.</p>
+                      </div>
+                      
+
+                      
+                   
+
+                  </div>
+                </div>
+          </div>
+
+          
+
+
+      </div>
+
+      <!--End of Analysis 1-->
+
+
+      <!--Discovery 2-->
+
+      <div class="project-main-heads-grey">
+
+          <div class="container">
+            
+                <div class="row">
+                  <div class="col-xs-12 project-margin-adjust">
+
+                    
+                    <h6 class="project-heading-type-5">
+                    How: Design vis idioms
+                    </h6>
+
+                    <h3 class="project-heading-type-3">
+                        “Encoding data into visualizations"
+                    </h3>
+
+                    <p class="project-content">
+                    	After distilling tasks from goals, I ideated upon different visualizations that could support those goals. The "How" framework was particularly helpful while designing visualizations. The elements of the framework that I used for my design decisions are as mentioned in the figure.
+                        
+                    </p>
+
+                  </div>
+                </div>
+
+                <div class="row" style="margin: 4% 0% 4% 0%;">
+                  <div class="col-xs-12">
+
+                    
+                    
+                      
+                 
+                      <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                      <div class="col-lg-8 col-md-8 col-sm-8"><img class="no-slider-image" src="images/de-how.jpg" style="width: 100%; display:block; margin: auto">
+                         <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">How to design vis idioms: encode, manipulate, facet, and reduce.</p>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2"></div>
+
+                      
+                   
+
+                  </div>
+                </div>
+
+                <div class="row" style="margin: 4% 0% 4% 0%;">
+                  <div class="col-xs-12">
+
+                    
+                    
+                      
+                 
+                      <div class="col-lg-2 col-md-2 col-sm-2"></div>
+                      <div class="col-lg-8 col-md-8 col-sm-8"><img class="no-slider-image" src="images/de-wireframes.jpg" style="width: 100%; display:block; margin: auto">
+                         <p class="project-1-photo-description" style="margin: 3% 0% 4.8% 0%">Iterating through wireframes</p>
+                      </div>
+                      <div class="col-lg-2 col-md-2 col-sm-2"></div>
+
+                      
+                   
+
+                  </div>
+                </div>
+          </div>
+
+          
+
+
+      </div>
+
+      <!--End of Discovery 2-->
+
+      
+
+
+
+
+                
+
+           
+
+
+
+
+        
+
+    <!--Design-->
+
+        
+
+        <div class="project-main-heads-white">
+
+          
+
+            <!-- Slate -->
+
+
+            <div class="container" style="margin-top: 3%; text-align: center;">
+
+              <h3 class="project-heading-type-2" style="font: 200 4.8rem/2.4rem 'Bebas Neue', sans-serif;""> 
+                         Introducing 'InVis'
+              </h3>
+              <h4 class="project-highlights-stats" style="text-align: center">"enabling effective consumption and production of data"</h4>  
+              <p class="project-content">
+                    	A sample user journey has been elucidated below which summarises the proposed design through an end to end scenario of interaction with 'InVis'.
+                        
+                    </p>
+
+                  
+
+            </div> 
+
+            
+
+
+                <div class="container-fluid">
+
+                  <!-- Fig8 showing comic strips -->
+                  <div class="row">
+                    <div class="col-xs-12 project-margin-adjust" style="margin-top: 3%; text-align: center ">
+                      <h3 class="project-heading-type-2">
+                        Supporting consumption and production of visualizations
+                      </h3>
+
+                      <img src="images/de-Design-1.png" style="display: block; margin: auto; width: 100%">
+                      
+
+                    </div>
+                    
+                  </div>
+
+                  
+
+                  
+
+                
+
+
+
+
+
+                </div>
+
+                
+
+            <!-- End of Slate -->
+
+             
+
+
+
+
+
+
+
+      
+
+          </div>
+          <!-- End of Design -->
+
+    <!--End of Project 2-->
+
+    <!--Back-->
+    <!--Back-->
+    <div class="project-1-back">
+      <a href="index.html" class="project-link" style="font-size: 1.0em; vertical-align: middle; color: rgba(239,83,80,0.75);"><i class="material-icons arrow-right" style="font-size: 1.0em">keyboard_backspace</i>Back to portfolio</a>
+    </div>
+
+
+    
+
+
+<!--Footer-->
+
+<div class="container-fluid footer">
+
+  <div class="row">
+
+    <div class="col-md-1 col-lg-1"></div>
+
+    <div class="col-md-5 col-lg-5">
+
+          <div class="row contact_info">
+                <div class="col-xs-12">
+                  <ul class="contact_info_ul">
+                    <li class="contact_info_li"><a style="padding-left: 0px;" href="mailto:ashutoshagrawaldesign@gmail.com" target="_top">ashutoshagrawaldesign@gmail.com</a></li>
+                    <span style="font-size: 2.4rem; vertical-align: middle;">&middot;</span>
+                    <li class="contact_info_li"><a href="https://www.linkedin.com/in/agrawal30/">LinkedIn</a></li>
+                    <span style="font-size: 2.4rem; vertical-align: middle;">&middot;</span>
+                    <li class="contact_info_li"><a href="https://www.facebook.com/ashutosh3028" style="border: 0px solid white">Facebook</a></li>
+
+                  </ul>
+                </div>
+
+          </div>
+
+    </div>
+
+    <div class="col-md-5 col-lg-5">
+
+              <div class="row copyright">
+                <div class="col-xs-12">
+                  <p class="copyright_info copy1">Website Designed and Developed by <a style="text-decoration: none; color: black" href="">Ashutosh Agrawal</a></p>
+                  <p class="copyright_info copy2">&copy;2017 Ashutosh Agrawal</p>
+                </div>
+              </div>
+
+  </div>
+
+  <div class="col-md-1 col-lg-1"></div>
+
+  </div>
+
+
+
+</div>
+
+<!--End of Footer-->
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+    <!-- Custom JS-->
+    <script src="js/modal.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/about.js"></script>
+    
+    <script src="js/slider.js"></script>
+    <script src="js/slider-1.js"></script>
+    <script src="js/slider-2.js"></script>
+    <script src="js/slider-3.js"></script>
+    <!--script src="js/persona-slider.js"></script-->
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
+    <!-- Bootstrap Core JavaScript -->
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- d3 js -->
+    <script src="js/script.js"></script>
+    <script src="js/subsystem.js"></script>
+
+    <script src="js/bootstrap.tooltip.js"></script>
+    <script src="js/bootstrap.popover.js"></script>
+
+
+
+
+    </body>
+    </html>
