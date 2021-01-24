@@ -1,11 +1,17 @@
 
-    @media only screen and (min-width: 993px)
+    @media only screen and (min-width: 992px)
     {
       .mobile{display: none;}
       .desktop{display: block;}
 
       .link{
         font-size: 24px;
+      }
+
+      .laptop_screen {
+        width: 32%; 
+        float: left; 
+        margin-right: 1.9%;
       }
 
       .logo{
@@ -36,25 +42,26 @@
       .card{
         text-align: -webkit-left;
         text-align: left;
+        min-height: 350px;
       }
 
       .thumb{
-        margin-top: 1.3em;
-        width: 350px;
-        height: 350px;
-        margin-left: 8%
+        margin-top: 0em;
+        width: 200px;
+        height: 200px;
+        margin-left: 15%
       }
 
       .project_details
       {
-        margin-top: 3.5em;
-        margin-left: 1em;
-        margin-right: 0.5em;
+        margin-top: 0em;
+        margin-left: 0.3em;
+        margin-right: 0.3em;
       }
 
       .project_details_1
       {
-        margin-top: 8%;
+        margin-top: 0%;
         margin-left: 8%;
         margin-right: 0.5em;
       }
@@ -66,7 +73,7 @@
 
       .project_description
       {
-        font-size: 2.4rem;
+        font-size: 1.2rem;
       }
 
       .readmore{
@@ -75,7 +82,7 @@
 
       .project_name_child
       {
-        font-size: 2.3em;
+        font-size: 0.9em;
       }
 
       .parallax
@@ -121,18 +128,76 @@
 
     }
 
-    @media only screen and (min-width: 1200px)
+    @media only screen and (min-width: 1280px)
     {
       .intro{
         text-align: left;
       }
+
+      .project_description
+      {
+        font-size: 1.7rem;
+      }
+
+
+      .project_name_child
+      {
+        font-size: 1.3em;
+      }
+
+      .card{
+        text-align: -webkit-left;
+        text-align: left;
+        min-height: 420px;
+      }
+
+      .thumb{
+        margin-top: 0em;
+        width: 250px;
+        height: 250px;
+        margin-left: 15%
+      }
     }
 
-    @media only screen and (max-width: 992px)
+    @media only screen and (max-width: 767px)
     {
       .desktop{display: none;}
+      .mobile {display: block;
+              margin: auto}
 
-      .thumb{margin-top: 1em; margin-bottom: 0;}
+
+      .thumb{margin-top: 0em; margin-bottom: 0;}
+
+      .project_description
+      {
+        font-size: 1.2rem;
+      }
+
+
+      .project_name_child
+      {
+        font-size: 0.9em;
+      }
+
+      .card{
+        text-align: -webkit-left;
+        text-align: center;
+        min-height: 320px;
+      }
+
+      .thumb{
+        margin-top: 0em;
+        width: 200px;
+        height: 200px;
+        margin-left: 20%
+      }
+
+      .project_details
+      {
+        margin-bottom: 0.1em;
+        margin-left: 0.1em;
+        margin-right: 0.1em;
+      }
     }
 
 
@@ -170,25 +235,37 @@
          background-position: -200px 0px;
        }
 
+       .laptop_screen {
+        width: 32%; 
+        float: left; 
+        margin-right: 1.9%;
+      }
+
        .thumb{
-         width: 350px;
-         height: 350px;
+         width: 200px;
+         height: 200px;
+         margin-left: 10%;
+       }
+
+       .card{
+        min-height: 350px;
+       }
+
+       .project_details{
+        margin-left: 0.1em;
+        margin-right: 0.1em;
        }
 
        .project_name_child
        {
-         font-size: 5.6rem;
+         font-size: 0.9em;
        }
 
        .project_description
        {
-         font-size: 2.4rem;
+         font-size: 1.2rem;
        }
 
-       .readmore
-       {
-         font-size: 2.4rem;
-       }
 
        .contact_info_ul
        {
@@ -204,15 +281,11 @@
        .mobile {display: block;
                  margin: auto}
 
-    }
-
-    @media only screen and (max-width: 767px) and (min-width: )
-    {.mobile {display: block;
-              margin: auto}
-
-
+        .desktop{display: none;}
 
     }
+
+
 
     @media only screen and (max-width: 800px) 
     {
@@ -262,7 +335,7 @@
     {
       .thumb
       {
-        margin-top: 2.7em;
+        margin-top: 0em;
         margin-left: 18%;
       }
 
@@ -285,12 +358,12 @@
 
       .project_name_child
       {
-        font-size: 3.4em;
+        font-size: 1.9em;
       }
 
       .project_description 
       {
-        font-size: 3.4rem;
+        font-size: 1.6rem;
       }
 
       .readmore 

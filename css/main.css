@@ -79,13 +79,19 @@
   margin-top: 0;
   display: block;
   margin: auto;
-  min-height: 300px;
+  min-height: 420px;
   height: auto;
   padding: 0px 5px;
   text-align: -webkit-center;
   margin-bottom: 2.25rem;
   padding-top: 8px;
+  transition: box-shadow .3s;
+  
 
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
 }
 
 .thumb
@@ -95,7 +101,7 @@
   width: 250px;
   height: 250px;
   overflow: hidden;
-  margin-bottom: 1.3em;
+  margin-bottom: 0em;
   position: relative;
 
 
@@ -126,13 +132,13 @@
 
 .project_name_child
 {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .project_description
 {
   font-family: CallunaLghtRegular, Georgia, serif;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-bottom: 1em;
 }
 
